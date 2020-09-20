@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>Varun Bajaj - Portfolio</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#1B3045">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#1B3045">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- snow -->
+    <!--<script type="text/javascript" src="js/snowstorm-min.js"></script>
+            <script>
+                snowStorm.excludeMobile = false;
+            </script>-->
+    <!-- snow end -->
+</head>
+
+<body bgcolor="orange">
+    <div class="navbar-fixed">
+        <nav class="white" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="index.php" class="brand-logo">Varun Bajaj</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="Varun_Bajaj_Resume.pdf" download="Varun Bajaj-Resume.pdf">Download Resume</a></li>
+                </ul>
+
+                <ul id="nav-mobile" class="side-nav">
+                    <li><a href="Varun_Bajaj_Resume.pdf" download="Varun Bajaj-Resume.pdf">Download Resume</a></li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m4 l4">
+            <div class="card hoverable black">
+                <div class="card-image">
+                    <img src="Life_Snap.PNG">
+                    <span class="card-title">Life (Group Project)</span>
+                </div>
+                <div class="card-content white-text">
+                    <p>A game about kindness, showcased at the iThrive Game Jam 2018!</p>
+                </div>
+                <div class="card-action">
+                    <a href="Life_Game.zip" download="Life_Game.zip">Download</a>
+                    <a onclick="showhide_life();">Watch Gameplay</a>
+                </div>
+                <div class="video-container" id="lifevideodiv" style="display: none;">
+                    <video class="responsive-video" controls id="lifevideoid">
+                        <source src="Life%20Gameplay.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m4 l4">
+            <div class="card hoverable black">
+                <div class="card-image">
+                    <img src="Game1.png">
+                    <span class="card-title">Endless Runner (Individual Project)</span>
+                </div>
+                <div class="card-content white-text">
+                    <p>A Third Person Endless Runner I made using Unreal Engine 4. Collect the rings and avoid
+                        the magma!</p>
+                </div>
+                <div class="card-action">
+                    <a href="EndlessRunner_VarunBajaj.rar" download="EndlessRunner_VarunBajaj.rar">Download</a>
+                    <a onclick="showhide1();">Watch Gameplay</a>
+                </div>
+                <div class="video-container" id="video1" style="display: none;">
+                    <video class="responsive-video" controls id="video1id">
+                        <source src="Magmaman%20Gameplay.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m4 l4">
+            <div class="card hoverable black">
+                <div class="card-image">
+                    <img src="Game3.png">
+                    <span class="card-title">A Race Against Time (Individual Project)</span>
+                </div>
+                <div class="card-content white-text">
+                    <p>Beat the high scores and go through the checkpoints as fast as you can! Made using Unreal
+                        Engine 4!</p>
+                </div>
+                <div class="card-action">
+                    <a href="RaceAgainstTime_VarunBajaj.rar" download="RaceAgainstTime_VarunBajaj.rar">Download</a>
+                    <a onclick="showhide_race();">Watch Gameplay</a>
+                </div>
+                <div class="video-container" id="racevideodiv" style="display: none;">
+                    <video class="responsive-video" controls id="racevideoid">
+                        <source src="Race%20Against%20Time%20Gameplay.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m4 l4">
+            <div class="card hoverable black">
+                <div class="card-image">
+                    <img src="Game4.jpg">
+                    <span class="card-title">Heroes Never Die (Individual Project)</span>
+                </div>
+                <div class="card-content white-text">
+                    <p>A twin stick shooter with a twist! Time moves only when you move! Survive by eliminating
+                        endless swarms of enemies! Made using Unreal Engine 4!</p>
+                </div>
+                <div class="card-action">
+                    <a href="TwinStickShooter_VarunBajaj.rar" download="TwinStickShooter_VarunBajaj.rar">Download</a>
+                    <a onclick="showhide_twinstick();">Watch Gameplay</a>
+                </div>
+                <div class="video-container" id="twinvideodiv" style="display: none;">
+                    <video class="responsive-video" controls id="twinvideoid">
+                        <source src="Twin%20Stick%20Shooter%20Gameplay.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m4 l4">
+            <div class="card hoverable black">
+                <div class="card-image">
+                    <img src="Game5.png">
+                    <span class="card-title" style="color: #676869;">DODGECUBE (Individual Project)</span>
+                </div>
+                <div class="card-content white-text">
+                    <p>You are a cube.
+                        <br>DODGE!
+                        <br>Made using Unity 3D!</p>
+                </div>
+                <div class="card-action">
+                    <a href="DODGECUBE_VarunBajaj.rar" download="DODGECUBE_VarunBajaj.rar">Download</a>
+                    <a onclick="showhide_cube();">Watch Gameplay</a>
+                </div>
+                <div class="video-container" id="cubevideodiv" style="display: none;">
+                    <video class="responsive-video" controls id="cubevideoid">
+                        <source src="DODGECUBE%20Gameplay.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m4 l4">
+            <div class="card hoverable black">
+                <div class="card-image">
+                    <img src="Game%20Screenshot.png">
+                    <span class="card-title">Alternate Control Project 1 (Group Project)</span>
+                </div>
+                <div class="card-content white-text">
+                    <p>Creating a controller called Octopad 3000, that allows 8 people to simultaneously control the
+                        movement of a fish underwater.</p>
+                </div>
+                <div class="card-action">
+                    <a href="FishGame_Game%20Files.zip" download="Varun Sunil Bajaj - FishGame.zip">Game</a>
+                    <a href="Octopad%203000.docx" download="Varun Sunil Bajaj - Octopad_Manual.docx">Manual</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m4 l4">
+            <div class="card hoverable black">
+                <div class="card-image">
+                    <img src="Capture.PNG">
+                    <span class="card-title">Alternate Control Project 2 (Group Project)</span>
+                </div>
+                <div class="card-content white-text">
+                    <p>A game where the player has to follow the sensei's orders to learn new moves. The player
+                        controls
+                        his/ her character by moving the hands and legs on a stick figure!</p>
+                </div>
+                <div class="card-action">
+                    <a href="DanceFu1.0.unitypackage.gz" download="Varun Sunil Bajaj - DanceFu.gz">Game</a>
+                    <a href="IMG_20180327_142708.jpg" download="Varun Sunil Bajaj - Stick Figure.jpg"
+                        target="_blank">Stick Figure Controller</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m4 l4">
+            <div class="card hoverable black">
+                <div class="card-image">
+                    <img src="cascade.jpg">
+                    <span class="card-title">Analysing and Designing for Cascade (Individual)</span>
+                </div>
+                <div class="card-content white-text">
+                    <p>Designing a Holiday-themed level and a new mechanic for the Match-3 game Cascade!</p>
+                </div>
+                <div class="card-action">
+                    <a href="Cascade%20Design%20Challenge%201%20-%20Designing%20a%20hoilday%20themed%20level%20-%20Varun%20Sunil%20Bajaj.docx"
+                        download="Varun Sunil Bajaj - Cascade Design 1.docx">Design 1 Doc</a>
+                    <a href="Cascade%20Design%20Challenge%201%20-%20Varun%20Sunil%20Bajaj.jpg"
+                        download="Varun Sunil Bajaj - Cascade Design 1.jpg" target="_blank">Design 1 Image</a><br>
+                    <a href="Cascade%20Design%20Challenge%202%20-%20Designing%20a%20new%20mechanic%20-%20Varun%20Sunil%20Bajaj.docx"
+                        download="Varun Sunil Bajaj - Cascade Design 2.docx">Design 2 Doc</a>
+                    <a href="Cascade%20Design%20Challenge%202%20-%20Image%201%20-%20Varun%20Sunil%20Bajaj.png"
+                        download="Varun Sunil Bajaj - Cascade Design 2 - Image 1.jpg" target="_blank">Design 2 -
+                        Image
+                        1</a>
+                    <a href="Cascade%20Design%20Challenge%202%20-%20Image%202%20-%20Varun%20Sunil%20Bajaj.png"
+                        download="Varun Sunil Bajaj - Cascade Design 2 - Image 2.jpg" target="_blank">Design 2 -
+                        Image
+                        2</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m4 l4">
+            <div class="card hoverable black">
+                <div class="card-image">
+                    <img src="candy.PNG">
+                    <span class="card-title">Match-3 Game in Unity (In Progress) (Individual)</span>
+                </div>
+                <div class="card-content white-text">
+                    <p>Making a Match-3 game from scratch in Unity!</p>
+                </div>
+                <div class="card-action">
+                    <a onclick="showhide_candy()">Watch Gameplay</a>
+                </div>
+                <div class="video-container" id="2d" style="display: none;">
+                    <video class="responsive-video" controls id="2d">
+                        <source src="Match%203%20Game%20-%20Progress%20So%20Far.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col s12 m4 l4">
+            <div class="card hoverable black">
+                <div class="card-image">
+                    <img src="vacation.png">
+                    <span class="card-title" style="color: black">Card and Dice Game (Individual)</span>
+                </div>
+                <div class="card-content white-text">
+                    <p>Designing a Card and Dice based game!</p>
+                </div>
+                <div class="card-action">
+                    <a href="Card%20and%20Dice%20Game%20Rule%20Sheet%20-%20Varun%20Sunil%20Bajaj.pdf"
+                        download="Varun Sunil Bajaj - Card and Dice Game Rule Sheet.pdf">Rule Sheet</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4 l4">
+            <div class="card hoverable black">
+                <div class="card-image">
+                    <img src="cube.PNG">
+                    <span class="card-title">Cube Simulator (Individual)</span>
+                </div>
+                <div class="card-content white-text">
+                    <p>A weekend-long prototyping project!</p>
+                </div>
+                <div class="card-action">
+                    <a href="Cube%20Simulator%20Game%20Files.zip" download="CubeSimulator_VarunBajaj.rar">Download</a>
+                    <a onclick="showhide();">Watch Gameplay</a>
+                </div>
+                <div class="video-container" id="video" style="display: none;">
+                    <video class="responsive-video" controls id="video">
+                        <source src="Cube_Gameplay.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m4 l4">
+            <div class="card hoverable black">
+                <div class="card-image">
+                    <img src="rts.PNG">
+                    <span class="card-title">2 Weeks Later (Group)</span>
+                </div>
+                <div class="card-content white-text">
+                    <p>A tower-defense RTS game!</p>
+                </div>
+                <div class="card-action">
+                    <a href="RTS_Game.zip" download="RTS_Game_VarunBajaj.rar">Download</a>
+                    <a onclick="showhide_rts();">Watch Trailer</a>
+                </div>
+                <div class="video-container" id="video_rts" style="display: none;">
+                    <video class="responsive-video" controls id="video_rts">
+                        <source src="2%20Weeks%20Later%20Official%20Release%20Trailer%202018.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m4 l4">
+            <div class="card hoverable black">
+                <div class="card-image">
+                    <img src="design_game_on_spot.jpg">
+                    <span class="card-title" style="color: black">Object-Based Game Design (Group)</span>
+                </div>
+                <div class="card-content white-text">
+                    <p>Designing a game around an object on the spot!</p>
+                </div>
+                <div class="card-action">
+                    <a href="Object%20based%20Game%20Design.pdf"
+                        download="Varun Sunil Bajaj - Object Based Game Design.pdf">Rule Sheet</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4 l4">
+            <div class="card hoverable black">
+                <div class="card-image">
+                    <img src="godot.PNG">
+                    <span class="card-title">High Roller - Godot Engine (Group)</span>
+                </div>
+                <div class="card-content white-text">
+                    <p>Learning an engine over a weekend - Godot Engine!</p>
+                </div>
+                <div class="card-action">
+                    <a href="Godot_GameFiles.zip" download="Godot_GameFiles_VarunBajaj.rar">Download</a>
+                    <a onclick="showhide_godot();">Watch Gameplay</a>
+                </div>
+                <div class="video-container" id="video_godot" style="display: none;">
+                    <video class="responsive-video" controls id="video_godot">
+                        <source src="Godot%20Platformer%20Gameplay.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m4 l4">
+            <div class="card hoverable black">
+                <div class="card-image">
+                    <img src="sports.PNG">
+                    <span class="card-title">Designing a Sports Game (Group)</span>
+                </div>
+                <div class="card-content white-text">
+                    <p>Designing a rule sheet for a sports game, from scratch!</p>
+                </div>
+                <div class="card-action">
+                    <a href="Sports%20Game%20Rule%20Sheet.pdf"
+                        download="SportsGameRuleSheet_VarunBajaj.pdf">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m4 l4">
+            <div class="card hoverable black">
+                <div class="card-image">
+                    <img src="There%20Will%20Be%20Blood%20Game%20Board%20-%20Varun%20Sunil%20Bajaj.jpg">
+                    <span class="card-title">Designing a Movie-based Board Game (Individual)</span>
+                </div>
+                <div class="card-content white-text">
+                    <p>Designing a rule sheet and game board for a game based on the movie "There Will Be Blood"!</p>
+                </div>
+                <div class="card-action">
+                    <a href="There%20Will%20Be%20Blood%20Board%20Game%20Rule%20Sheet%20-%20Varun%20Sunil%20Bajaj.pdf"
+                        download="ThereWillBeBlood_VarunBajaj.pdf">Download Rule Sheet</a>
+                    <a href="There%20Will%20Be%20Blood%20Game%20Board%20-%20Varun%20Sunil%20Bajaj.jpg"
+                        download="ThereWillBeBlood_GameBoard.jpg">Download Game Board</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer black">
+        <div class="container">
+            <ul style="list-style:none;" class="center">
+                <li style="display: inline; padding-right: 5px;"><a href="http://www.youtube.com/PhoenixFruitloops"
+                        target="_blank"><i class="red-text fa fa-youtube-square fa-3x"></i></a></li>
+                <li style="display: inline; padding-right: 5px;"><a href="http://www.twitter.com/VarunBajaj22"
+                        target="_blank"><i class="blue-text fa fa-twitter-square fa-3x"></i></a></li>
+                <li style="display: inline; padding-right: 5px;"><a href="http://www.facebook.com/varun.bajaj.566"
+                        target="_blank"><i class="indigo-text fa fa-facebook-square fa-3x"></i></a></li>
+                <li style="display: inline; padding-right: 5px;"><a href="http://www.plus.google.com/PhoenixFruitloops"
+                        target="_blank"><i class="red-text fa fa-google-plus-square fa-3x"></i></a></li>
+                <li style="display: inline; padding-right: 5px;"><a href="http://www.instagram.com/VarunBajaj22"
+                        target="_blank"><i class="orange-text fa fa-instagram fa-3x"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+            </div>
+        </div>
+    </footer>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.scrollspy').scrollSpy();
+            $('.slider').slider({
+                full_width: true
+            });
+        });
+
+    </script>
+    <script>
+        function showhide1() {
+            var a = document.getElementById('video1');
+            if (a.style.display == 'none') a.style.display = 'block';
+            else a.style.display = 'none';
+            var b = document.getElementById('video1id');
+            b.pause();
+        }
+
+        function showhide_race() {
+            var e = document.getElementById('racevideodiv');
+            if (e.style.display == 'none') e.style.display = 'block';
+            else e.style.display = 'none';
+            var f = document.getElementById('racevideoid');
+            f.pause();
+        }
+
+        function showhide_twinstick() {
+            var e = document.getElementById('twinvideodiv');
+            if (e.style.display == 'none') e.style.display = 'block';
+            else e.style.display = 'none';
+            var f = document.getElementById('twinvideoid');
+            f.pause();
+        }
+
+        function showhide_cube() {
+            var e = document.getElementById('cubevideodiv');
+            if (e.style.display == 'none') e.style.display = 'block';
+            else e.style.display = 'none';
+            var f = document.getElementById('cubevideoid');
+            f.pause();
+        }
+
+        function showhide_life() {
+            var e = document.getElementById('lifevideodiv');
+            if (e.style.display == 'none') e.style.display = 'block';
+            else e.style.display = 'none';
+            var f = document.getElementById('lifevideoid');
+            f.pause();
+        }
+
+        function showhide_candy() {
+            var e = document.getElementById('2d');
+            if (e.style.display == 'none') e.style.display = 'block';
+            else e.style.display = 'none';
+            var f = document.getElementById('2d');
+            f.pause();
+        }
+
+        function showhide() {
+            var e = document.getElementById('video');
+            if (e.style.display == 'none') e.style.display = 'block';
+            else e.style.display = 'none';
+            var f = document.getElementById('video');
+            f.pause();
+        }
+
+        function showhide_rts() {
+            var e = document.getElementById('video_rts');
+            if (e.style.display == 'none') e.style.display = 'block';
+            else e.style.display = 'none';
+            var f = document.getElementById('video_rts');
+            f.pause();
+        }
+
+        function showhide_godot() {
+            var e = document.getElementById('video_godot');
+            if (e.style.display == 'none') e.style.display = 'block';
+            else e.style.display = 'none';
+            var f = document.getElementById('video_godot');
+            f.pause();
+        }
+
+    </script>
+</body>
+
+</html>

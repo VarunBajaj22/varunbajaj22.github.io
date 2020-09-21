@@ -74,13 +74,13 @@
                         <p>A game about kindness, showcased at the iThrive Game Jam 2018!</p>
                     </div>
                     <div class="card-action">
-                        <a href="Life_Game.zip" download="Life_Game.zip">Download</a>
-                        <a onclick="showhide_life();">Watch Gameplay</a>
+                        <a href="https://drive.google.com/file/d/15HnzvtzDh0nmwHvrEVI7i89pFQsa_7Z3/view?usp=sharing"
+                            download="Life_Game.zip" target="_blank">Download</a>
+                        <a onclick="showhide_video('lifevideodiv', 'lifevideoid');">Watch Gameplay</a>
                     </div>
                     <div class="video-container" id="lifevideodiv" style="display: none;">
-                        <video class="responsive-video" controls id="lifevideoid">
-                            <source src="Life%20Gameplay.mp4" type="video/mp4">
-                        </video>
+                        <iframe id="lifevideoid"
+                            src="https://drive.google.com/file/d/1_vEtafYSXUDYMX4kPxaYLidxX7Asha96/preview"></iframe>
                     </div>
                 </div>
             </div>
@@ -434,78 +434,15 @@
 
     </script>
     <script>
-        function showhide1() {
-            var a = document.getElementById('video1');
-            if (a.style.display == 'none') a.style.display = 'block';
-            else a.style.display = 'none';
-            var b = document.getElementById('video1id');
-            b.pause();
-        }
-
-        function showhide_race() {
-            var e = document.getElementById('racevideodiv');
+        function showhide_video(divId, videoId) {
+            var e = document.getElementById(divId);
             if (e.style.display == 'none') e.style.display = 'block';
             else e.style.display = 'none';
-            var f = document.getElementById('racevideoid');
-            f.pause();
+            var f = document.getElementById(videoId);
+            // pause iframe video
+            var iframeSrc = f.src;
+            f.src = iframeSrc;
         }
-
-        function showhide_twinstick() {
-            var e = document.getElementById('twinvideodiv');
-            if (e.style.display == 'none') e.style.display = 'block';
-            else e.style.display = 'none';
-            var f = document.getElementById('twinvideoid');
-            f.pause();
-        }
-
-        function showhide_cube() {
-            var e = document.getElementById('cubevideodiv');
-            if (e.style.display == 'none') e.style.display = 'block';
-            else e.style.display = 'none';
-            var f = document.getElementById('cubevideoid');
-            f.pause();
-        }
-
-        function showhide_life() {
-            var e = document.getElementById('lifevideodiv');
-            if (e.style.display == 'none') e.style.display = 'block';
-            else e.style.display = 'none';
-            var f = document.getElementById('lifevideoid');
-            f.pause();
-        }
-
-        function showhide_candy() {
-            var e = document.getElementById('2d');
-            if (e.style.display == 'none') e.style.display = 'block';
-            else e.style.display = 'none';
-            var f = document.getElementById('2d');
-            f.pause();
-        }
-
-        function showhide() {
-            var e = document.getElementById('video');
-            if (e.style.display == 'none') e.style.display = 'block';
-            else e.style.display = 'none';
-            var f = document.getElementById('video');
-            f.pause();
-        }
-
-        function showhide_rts() {
-            var e = document.getElementById('video_rts');
-            if (e.style.display == 'none') e.style.display = 'block';
-            else e.style.display = 'none';
-            var f = document.getElementById('video_rts');
-            f.pause();
-        }
-
-        function showhide_godot() {
-            var e = document.getElementById('video_godot');
-            if (e.style.display == 'none') e.style.display = 'block';
-            else e.style.display = 'none';
-            var f = document.getElementById('video_godot');
-            f.pause();
-        }
-
     </script>
 </body>
 

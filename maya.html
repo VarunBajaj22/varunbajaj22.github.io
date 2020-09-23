@@ -66,7 +66,7 @@
             <div class="col s12 m4 l4">
                 <div class="card hoverable black">
                     <div class="card-image">
-                        <img src="Chess.PNG">
+                        <img src="images/maya/Chess.PNG">
                         <span class="card-title">Chess Set (Individual)</span>
                     </div>
                     <div class="card-action">
@@ -79,7 +79,7 @@
             <div class="col s12 m4 l4">
                 <div class="card hoverable black">
                     <div class="card-image">
-                        <img src="Axe.PNG">
+                        <img src="images/maya/Axe.PNG">
                         <span class="card-title">Axe (Individual)</span>
                     </div>
                     <div class="card-action">
@@ -92,7 +92,7 @@
             <div class="col s12 m4 l4">
                 <div class="card hoverable black">
                     <div class="card-image">
-                        <img src="Baby.PNG">
+                        <img src="images/maya/Baby.PNG">
                         <span class="card-title">Baby Character Model (Individual)</span>
                     </div>
                     <div class="card-action">
@@ -106,7 +106,7 @@
             <div class="col s12 m4 l4">
                 <div class="card hoverable black">
                     <div class="card-image">
-                        <img src="Hammer.png">
+                        <img src="images/maya/Hammer.png">
                         <span class="card-title">Hammer (Individual)</span>
                     </div>
                     <div class="card-action">
@@ -119,7 +119,7 @@
             <div class="col s12 m4 l4">
                 <div class="card hoverable black">
                     <div class="card-image">
-                        <img src="Chair.PNG">
+                        <img src="images/maya/Chair.PNG">
                         <span class="card-title">Chair (Individual)</span>
                     </div>
                     <div class="card-action">
@@ -132,16 +132,15 @@
             <div class="col s12 m4 l4">
                 <div class="card hoverable black">
                     <div class="card-image">
-                        <img src="candle.PNG">
+                        <img src="images/maya/candle.PNG">
                         <span class="card-title">Candle Animation (Individual)</span>
                     </div>
                     <div class="card-action">
-                        <a onclick="showhide_candle();">View Animation</a>
+                        <a onclick="showhide_video('candlevideodiv', 'candlevideoid');">View Animation</a>
                     </div>
-                    <div class="video-container" id="candle" style="display: none;">
-                        <video class="responsive-video" controls id="candle">
-                            <source src="Candle.mp4" type="video/mp4">
-                        </video>
+                    <div class="video-container" id="candlevideodiv" style="display: none;">
+                        <iframe id="candlevideoid"
+                            src="https://drive.google.com/file/d/1J7MdJuSOg0miDQX27krskWUxno5fFsXo/preview"></iframe>
                     </div>
                 </div>
             </div>
@@ -150,16 +149,15 @@
             <div class="col s12 m4 l4">
                 <div class="card hoverable black">
                     <div class="card-image">
-                        <img src="Mechanical_Arm.PNG">
+                        <img src="images/maya/Mechanical_Arm.PNG">
                         <span class="card-title">Mechanical Arm Animation (Individual)</span>
                     </div>
                     <div class="card-action">
-                        <a onclick="showhide_arm();">View Animation</a>
+                        <a onclick="showhide_video('armvideodiv', 'armvideoid');">View Animation</a>
                     </div>
-                    <div class="video-container" id="arm" style="display: none;">
-                        <video class="responsive-video" controls id="arm">
-                            <source src="Mechanical_Arm.mp4" type="video/mp4">
-                        </video>
+                    <div class="video-container" id="armvideodiv" style="display: none;">
+                        <iframe id="armvideoid"
+                            src="https://drive.google.com/file/d/12inrVRYnrtKWSpzdRVBAwURR-r3rnSP-/preview"></iframe>
                     </div>
                 </div>
             </div>
@@ -189,6 +187,7 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
+    <script src="js/videoHelper.js"></script>
     <script>
         $(document).ready(function () {
             $('.scrollspy').scrollSpy();
@@ -196,24 +195,6 @@
                 full_width: true
             });
         });
-
-    </script>
-    <script>
-        function showhide_candle() {
-            var e = document.getElementById('candle');
-            if (e.style.display == 'none') e.style.display = 'block';
-            else e.style.display = 'none';
-            var f = document.getElementById('candle');
-            f.pause();
-        }
-
-        function showhide_arm() {
-            var e = document.getElementById('arm');
-            if (e.style.display == 'none') e.style.display = 'block';
-            else e.style.display = 'none';
-            var f = document.getElementById('arm');
-            f.pause();
-        }
 
     </script>
 </body>

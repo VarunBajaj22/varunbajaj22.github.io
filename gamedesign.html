@@ -51,11 +51,55 @@
                 <div class="nav-wrapper container">
                     <a id="logo-container" href="index.html" class="brand-logo">Varun Bajaj</a>
                     <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <ul id="work-dropdown" class="dropdown-content">
+                                <li><a href="leveldesign.html">Level Design</a></li>
+                                <li class="divider"></li>
+                                <li><a href="gamedesign.html">Game Design</a></li>
+                                <li class="divider"></li>
+                                <li><a href="gamedev.html">Game Development Processes</a></li>
+                                <li class="divider"></li>
+                                <li><a href="gameplay_prototyping.html">Gameplay and Prototyping</a></li>
+                                <li class="divider"></li>
+                                <li><a href="maya.html">Modeling, Texturing and Animation</a></li>
+                                <li class="divider"></li>
+                                <li><a href="vr_game_dev.html">VR Game Dev</a></li>
+                                <li class="divider"></li>
+                                <li><a href="gamebalance.html">Game Balance</a></li>
+                            </ul>
+                            <a class="dropdown-button" href="#" data-activates="work-dropdown">My Work<i
+                                    class="material-icons right black-text">arrow_drop_down</i></a>
+                        </li>
                         <li><a href="Varun_Bajaj_Resume.pdf" download="Varun Bajaj-Resume.pdf">Download Resume</a></li>
                     </ul>
 
                     <ul id="nav-mobile" class="side-nav">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
                         <li><a href="Varun_Bajaj_Resume.pdf" download="Varun Bajaj-Resume.pdf">Download Resume</a></li>
+                        <li>
+                            <ul id="work-dropdown-mobile" class="dropdown-content">
+                                <li><a href="leveldesign.html">Level Design</a></li>
+                                <li class="divider"></li>
+                                <li><a href="gamedesign.html">Game Design</a></li>
+                                <li class="divider"></li>
+                                <li><a href="gamedev.html">Game Development Processes</a></li>
+                                <li class="divider"></li>
+                                <li><a href="gameplay_prototyping.html">Gameplay and Prototyping</a></li>
+                                <li class="divider"></li>
+                                <li><a href="maya.html">Modeling, Texturing and Animation</a></li>
+                                <li class="divider"></li>
+                                <li><a href="vr_game_dev.html">VR Game Dev</a></li>
+                                <li class="divider"></li>
+                                <li><a href="gamebalance.html">Game Balance</a></li>
+                            </ul>
+                            <a class="dropdown-button" href="#" data-activates="work-dropdown-mobile">My Work<i
+                                    class="material-icons right black-text">arrow_drop_down</i></a>
+                        </li>
                     </ul>
                     <a href="#" data-activates="nav-mobile" class="button-collapse"><i
                             class="material-icons">menu</i></a>
@@ -195,6 +239,9 @@
     <script src="js/init.js"></script>
     <script>
         $(document).ready(function () {
+            $(".dropdown-button").dropdown({
+                hover: false
+            });
             $('.scrollspy').scrollSpy();
             $('.slider').slider({
                 full_width: true

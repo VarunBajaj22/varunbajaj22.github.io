@@ -78,3 +78,7 @@ footer.page-footer {
 #playbutton:focus {
   background: orange;
 }
+
+.dropdown-content {
+  top: 64px !important;
+}

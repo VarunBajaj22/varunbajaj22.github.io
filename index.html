@@ -379,23 +379,21 @@
                         </div>
                     </div>
                     <div class="col s12 m6 l6">
-
-                        <div class="card hoverable black">
-                            <div class="slider">
-                                <ul class="slides">
-                                    <li>
-                                        <img src="images/home/udemy-leveldesign.jpg">
-                                    </li>
-                                    <li>
-                                        <img src="images/home/mit.jpg">
-                                    </li>
-                                    <li>
-                                        <img src="images/home/ue4.jpg">
-                                    </li>
-                                    <li>
-                                        <img src="images/home/BEC.jpg">
-                                    </li>
-                                </ul>
+                        <div class="carousel carousel-slider">
+                            <div class="carousel-fixed-item">
+                                <h5 class="white-text">My Certifications</h5>
+                              </div>
+                            <div class="carousel-item" href="#one!">
+                                <img class="responsive-img" src="images/home/udemy-leveldesign.jpg">
+                            </div>
+                            <div class="carousel-item" href="#two!">
+                                <img class="responsive-img" src="images/home/mit.jpg">
+                            </div>
+                            <div class="carousel-item" href="#three!">
+                                <img class="responsive-img" src="images/home/ue4.jpg">
+                            </div>
+                            <div class="carousel-item" href="#four!">
+                                <img class="responsive-img" src="images/home/BEC.jpg">
                             </div>
                         </div>
                     </div>
@@ -435,11 +433,11 @@
                 hover: false
             });
             $('.scrollspy').scrollSpy();
-            $('.slider').slider({
-                full_width: true
+            $('.carousel.carousel-slider').carousel({
+                fullWidth: true,
+                indicators: true
             });
         });
-
     </script>
 
     <!-- Start of StatCounter Code for Default Guide -->

@@ -86,3 +86,22 @@ footer.page-footer {
 .drag-target {
   width: 0px !important;
 }
+
+.carousel-slider {
+  height: 500px !important;
+}
+
+.carousel-item {
+  display:block;
+  margin:auto;
+}
+
+.carousel-item img {
+  position: relative;
+  top: 75px;
+}
+
+.carousel.carousel-slider .carousel-fixed-item {
+  position: relative !important;
+  bottom: 0px !important;
+}

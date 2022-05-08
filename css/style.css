@@ -82,8 +82,3 @@ footer.page-footer {
 #work-dropdown {
   top: 64px !important;
 }
-
-#work-dropdown-mobile {
-  position: relative !important;
-  top: 0px !important;
-}

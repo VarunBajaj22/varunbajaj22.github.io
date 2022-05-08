@@ -82,3 +82,7 @@ footer.page-footer {
 #work-dropdown {
   top: 64px !important;
 }
+
+.drag-target {
+  width: 0px !important;
+}

@@ -138,9 +138,6 @@
                             </div>
                             <div class="card-action">
                                 <a href="https://www.youtube.com/watch?v=htzq7EEXQs8" target="_blank">Trailer</a>
-                                <a class="waves-effect waves-light btn"
-                                    href="https://www.ubisoft.com/en-us/game/prince-of-persia/sands-of-time-remake"
-                                    target="_blank" id="playbutton">Pre-Order</a>
                             </div>
                         </div>
                     </div>
@@ -160,9 +157,14 @@
                             </div>
                             <div class="card-action">
                                 <a href="https://www.youtube.com/watch?v=Kax36bQDNnA" target="_blank">Trailer</a>
+                                <a onclick="showhide_video('lightlessideodiv', 'lightlessvideoid');">Gameplay</a>
                                 <a class="waves-effect waves-light btn"
                                     href="https://lightanic-studios.itch.io/lightless" target="_blank"
                                     id="playbutton">Play</a>
+                            </div>
+                            <div class="video-container" id="lightlessideodiv" style="display: none;">
+                                <iframe id="lightlessvideoid"
+                                    src="https://drive.google.com/file/d/1d0TF8PJEiHFrw5P9dAZeIGr-ya7hMSte/preview"></iframe>
                             </div>
                         </div>
                     </div>
@@ -427,6 +429,7 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/init.js"></script>
+    <script src="js/videoHelper.js"></script>
     <script>
         $(document).ready(function () {
             $(".dropdown-button").dropdown({

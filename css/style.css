@@ -106,3 +106,7 @@ footer.page-footer {
   position: relative !important;
   bottom: 0px !important;
 }
+
+.dropdown-content li > a, .dropdown-content li > span {
+  color: orange;
+}

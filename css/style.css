@@ -67,15 +67,16 @@ footer.page-footer {
   margin: 0;
 }
 
-#playbutton {
+.btn {
+  background: orange;
+  margin-top: 5px;
+}
+
+.btn:hover {
   background: orange;
 }
 
-#playbutton:hover {
-  background: orange;
-}
-
-#playbutton:focus {
+.btn:focus {
   background: orange;
 }
 

@@ -1,0 +1,252 @@
+---
+import { navLinks, resume } from '../data/socials';
+
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+---
+
+<header class="navbar" id="navbar">
+  <div class="navbar-inner container">
+    <a href="/" class="navbar-brand">
+      <span class="brand-name">Varun Bajaj</span>
+    </a>
+
+    <nav class="navbar-links" aria-label="Main navigation">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class:list={['nav-link', { active: currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href)) }]}
+        >
+          {link.label}
+        </a>
+      ))}
+      <a href={resume.url} class="btn btn-outline btn-sm" download={resume.download}>
+        {resume.label}
+      </a>
+    </nav>
+
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="hamburger"></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-overlay" aria-hidden="true"></div>
+<nav class="mobile-drawer" aria-label="Mobile navigation" aria-hidden="true">
+  <div class="drawer-header">
+    <span class="brand-name">Varun Bajaj</span>
+    <button class="drawer-close" aria-label="Close menu">&times;</button>
+  </div>
+  <div class="drawer-links">
+    {navLinks.map(link => (
+      <a href={link.href} class="drawer-link">{link.label}</a>
+    ))}
+    <a href={resume.url} class="btn btn-primary" download={resume.download} style="margin-top: 1rem; justify-content: center;">
+      {resume.label}
+    </a>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: var(--nav-height);
+    background: var(--bg-nav);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-subtle);
+    transition: background var(--transition-med);
+  }
+
+  .navbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .brand-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+  }
+
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .nav-link {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+  }
+
+  .nav-link:hover, .nav-link.active {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-link.active {
+    color: var(--accent-primary);
+  }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    position: relative;
+    transition: background var(--transition-fast);
+  }
+
+  .hamburger::before, .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--text-primary);
+    transition: transform var(--transition-fast);
+  }
+
+  .hamburger::before { top: -7px; }
+  .hamburger::after { top: 7px; }
+
+  .mobile-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 150;
+    opacity: 0;
+    transition: opacity var(--transition-med);
+  }
+
+  .mobile-overlay.open {
+    display: block;
+    opacity: 1;
+  }
+
+  .mobile-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(300px, 80vw);
+    background: var(--bg-secondary);
+    z-index: 200;
+    transform: translateX(100%);
+    transition: transform var(--transition-med);
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--border-subtle);
+  }
+
+  .mobile-drawer.open {
+    transform: translateX(0);
+  }
+
+  .drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .drawer-close {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.75rem;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+  }
+
+  .drawer-links {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+  }
+
+  .drawer-link {
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-subtle);
+    transition: color var(--transition-fast);
+  }
+
+  .drawer-link:hover {
+    color: var(--accent-primary);
+  }
+
+  @media (max-width: 900px) {
+    .navbar-links { display: none; }
+    .menu-toggle { display: block; }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle')!;
+  const drawer = document.querySelector('.mobile-drawer')!;
+  const overlay = document.querySelector('.mobile-overlay')!;
+  const closeBtn = document.querySelector('.drawer-close')!;
+
+  function openMenu() {
+    drawer.classList.add('open');
+    drawer.setAttribute('aria-hidden', 'false');
+    overlay.classList.add('open');
+    toggle.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    drawer.classList.remove('open');
+    drawer.setAttribute('aria-hidden', 'true');
+    overlay.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+  overlay.addEventListener('click', closeMenu);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+
+  drawer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+</script>

@@ -1,1 +1,8 @@
+Nexus/
+node_modules/
+dist/
+.astro/
 .DS_Store
+
+# Local Netlify folder
+.netlify

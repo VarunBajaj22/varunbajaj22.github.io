@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<BaseLayout title="Varun Bajaj | Gameplay & Prototyping" description="Weekly individual and team-based game jam prototypes and gameplay experiments by Varun Bajaj.">
+  <section class="section" style="padding-top: calc(var(--nav-height) + 3rem);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h1 class="section-title">Gameplay and Prototyping</h1>
+      </div>
+
+      <div class="card-grid">
+        <ProjectCard title="Life" description="A game about kindness, showcased at the iThrive Game Jam 2018!" image="/images/gameplay_prototyping/Life_Snap.PNG" imageAlt="Life game jam project" tags={['Group']} actions={[{label:'Download',url:'https://drive.google.com/file/d/15HnzvtzDh0nmwHvrEVI7i89pFQsa_7Z3/view?usp=sharing'},{label:'Watch Gameplay',videoId:'life'}]} videos={[{id:'life',src:'https://drive.google.com/file/d/1_vEtafYSXUDYMX4kPxaYLidxX7Asha96/preview'}]} />
+
+        <ProjectCard title="Endless Runner" description="A Third Person Endless Runner I made using Unreal Engine 4. Collect the rings and avoid the magma!" image="/images/gameplay_prototyping/Game1.png" imageAlt="Endless runner UE4 game" tags={['Individual']} actions={[{label:'Download',url:'https://drive.google.com/file/d/1w1oQPJ2ZfPmUYSihvezm_xefPVDjf0v3/view?usp=sharing'},{label:'Watch Gameplay',videoId:'runner'}]} videos={[{id:'runner',src:'https://drive.google.com/file/d/1p_3k9jFj8S4DSoY6zcXHszO7bLEZ-dh2/preview'}]} />
+
+        <ProjectCard title="A Race Against Time" description="Beat the high scores and go through the checkpoints as fast as you can! Made using Unreal Engine 4!" image="/images/gameplay_prototyping/Game3.png" imageAlt="Race Against Time UE4 game" tags={['Individual']} actions={[{label:'Download',url:'https://drive.google.com/file/d/1bllwVxAgukX1p_TUP-jW584haXNQL1e-/view?usp=sharing'},{label:'Watch Gameplay',videoId:'race'}]} videos={[{id:'race',src:'https://drive.google.com/file/d/1rxyblsPJ43kXneQHIbtMDTIMlesqOz93/preview'}]} />
+
+        <ProjectCard title="Heroes Never Die" description="A twin stick shooter with a twist! Time moves only when you move! Survive by eliminating endless swarms of enemies! Made using Unreal Engine 4!" image="/images/gameplay_prototyping/Game4.jpg" imageAlt="Heroes Never Die twin stick shooter" tags={['Individual']} actions={[{label:'Download',url:'https://drive.google.com/file/d/1EJ5dYUvFUHj403TEsaNv-lpc-oQEYwF5/view?usp=sharing'},{label:'Watch Gameplay',videoId:'twin'}]} videos={[{id:'twin',src:'https://drive.google.com/file/d/1adjqfNjkNv380K8cPoTn3R4_Ca28IqwY/preview'}]} />
+
+        <ProjectCard title="DODGECUBE" description="You are a cube. DODGE! Made using Unity 3D!" image="/images/gameplay_prototyping/Game5.png" imageAlt="DODGECUBE Unity 3D game" tags={['Individual']} actions={[{label:'Download',url:'https://drive.google.com/file/d/1quoUeMNrYBXyK0pFYu8IK6zaoouOXiQP/view?usp=sharing'},{label:'Watch Gameplay',videoId:'dodge'}]} videos={[{id:'dodge',src:'https://drive.google.com/file/d/1j2DU6JK6pdz0LFdLqOIo2WqZoWAEajEW/preview'}]} />
+
+        <ProjectCard title="Analysing and Designing for Cascade" description="Designing a Holiday-themed level and a new mechanic for the Match-3 game Cascade!" image="/images/gameplay_prototyping/cascade.jpg" imageAlt="Cascade match-3 game design" tags={['Individual']} actions={[{label:'Design 1 Doc',url:'https://drive.google.com/file/d/1vdpzgX9N_ymHitZp2A8fFryv43yn22lB/view?usp=sharing'},{label:'Design 1 Image',url:'/images/gameplay_prototyping/Cascade Design Challenge 1 - Varun Sunil Bajaj.jpg'},{label:'Design 2 Doc',url:'https://drive.google.com/file/d/1x9Erqx_pfigpBmayeE48bxkfrgJoOmCE/view?usp=sharing'},{label:'Design 2 - Image 1',url:'/images/gameplay_prototyping/Cascade Design Challenge 2 - Image 1 - Varun Sunil Bajaj.png'},{label:'Design 2 - Image 2',url:'/images/gameplay_prototyping/Cascade Design Challenge 2 - Image 2 - Varun Sunil Bajaj.png'}]} />
+
+        <ProjectCard title="Match-3 Game in Unity (In Progress)" description="Making a Match-3 game from scratch in Unity!" image="/images/gameplay_prototyping/candy.PNG" imageAlt="Match-3 Unity game in progress" tags={['Individual']} actions={[{label:'Watch Gameplay',videoId:'match3'}]} videos={[{id:'match3',src:'https://drive.google.com/file/d/1AmENGQkt9uLRGkMAYoA_20Z06Kw74sch/preview'}]} />
+
+        <ProjectCard title="Card and Dice Game" description="Designing a Card and Dice based game!" image="/images/gameplay_prototyping/vacation.png" imageAlt="Card and dice game design" darkTitle={true} tags={['Individual']} actions={[{label:'Rule Sheet',url:'https://drive.google.com/file/d/1Ik5WBuen2HLoSDq2tcuJRkb_4hrtMES0/view?usp=sharing'}]} />
+
+        <ProjectCard title="Cube Simulator" description="A weekend-long prototyping project!" image="/images/gameplay_prototyping/cube.PNG" imageAlt="Cube Simulator prototype" tags={['Individual']} actions={[{label:'Download',url:'https://drive.google.com/file/d/14o1O12vx2qf_GnO8uC841pOJ4V3pw8K2/view?usp=sharing'},{label:'Watch Gameplay',videoId:'cubesim'}]} videos={[{id:'cubesim',src:'https://drive.google.com/file/d/1Yb_BgoLXTx8w7y0DFBuylNSkJwfT6KRg/preview'}]} />
+
+        <ProjectCard title="2 Weeks Later" description="A tower-defense RTS game!" image="/images/gameplay_prototyping/rts.PNG" imageAlt="2 Weeks Later tower defense game" tags={['Group']} actions={[{label:'Download',url:'https://drive.google.com/file/d/1tnfgDgCn0n2NSYW5ovuoeuJMV28pxIq3/view?usp=sharing'},{label:'Watch Trailer',videoId:'rts'}]} videos={[{id:'rts',src:'https://drive.google.com/file/d/1PsvUn5HDmwu_YxBqDzKulz1gMo7BISkn/preview'}]} />
+
+        <ProjectCard title="Object-Based Game Design" description="Designing a game around an object on the spot!" image="/images/gameplay_prototyping/design_game_on_spot.jpg" imageAlt="Object-based game design" darkTitle={true} tags={['Group']} actions={[{label:'Rule Sheet',url:'https://drive.google.com/file/d/17bYxcpygF9E0UhQeYJBqFpl-F3-hPQsj/view?usp=sharing'}]} />
+
+        <ProjectCard title="High Roller — Godot Engine" description="Learning an engine over a weekend — Godot Engine!" image="/images/gameplay_prototyping/godot.PNG" imageAlt="High Roller Godot Engine game" tags={['Group']} actions={[{label:'Download',url:'https://drive.google.com/file/d/1A58uxZU7ptumIZndt5_dLJ__Fpd6LTWW/view?usp=sharing'},{label:'Watch Gameplay',videoId:'godot'}]} videos={[{id:'godot',src:'https://drive.google.com/file/d/1nMqX55IqX1sgFC_IBknYadYweT4T9Fdu/preview'}]} />
+
+        <ProjectCard title="Designing a Sports Game" description="Designing a rule sheet for a sports game, from scratch!" image="/images/gameplay_prototyping/sports.PNG" imageAlt="Sports game rule sheet design" tags={['Group']} actions={[{label:'Rule Sheet',url:'https://drive.google.com/file/d/1f-x0ErspAmtIwns7HEuEW6Bdb5MjP4zL/view?usp=sharing'}]} />
+
+        <ProjectCard title="Designing a Movie-based Board Game" description='Designing a rule sheet and game board for a game based on the movie "There Will Be Blood"!' image="/images/gameplay_prototyping/There Will Be Blood Game Board - Varun Sunil Bajaj.jpg" imageAlt="There Will Be Blood board game" tags={['Individual']} actions={[{label:'Rule Sheet',url:'https://drive.google.com/file/d/1To0hCO4H7jHEv4odhTFPLWIUSqYvmbB4/view?usp=sharing'},{label:'Game Board',url:'/images/gameplay_prototyping/There Will Be Blood Game Board - Varun Sunil Bajaj.jpg'}]} />
+
+        <ProjectCard title="Project Boost" description='Make your way to the final platform without touching any other surfaces! Developed as part of the "Complete C# Unity Game Developer Course".' image="/images/gameplay_prototyping/projectboostbanner.png" imageAlt="Project Boost Unity game" tags={['Individual']} actions={[{label:'Download',url:'https://drive.google.com/file/d/1zQuHCevmgUFRf5Zy0CVbn0TNMlopVZla/view?usp=sharing'},{label:'Watch Gameplay',videoId:'boost'}]} videos={[{id:'boost',src:'https://drive.google.com/file/d/1wSIP415zVjMyKborLHis4K5aHHdaziW3/preview'}]} />
+
+        <ProjectCard title="Terminal Hacker" description='Hack the network by solving anagrams! Developed as part of the "Complete C# Unity Game Developer Course".' image="/images/gameplay_prototyping/terminalhackerbanner.png" imageAlt="Terminal Hacker Unity game" tags={['Individual']} actions={[{label:'Download',url:'https://drive.google.com/file/d/1CTguywWzb0nEAbXhDiLVFwCrEsdms2xZ/view?usp=sharing'},{label:'Watch Gameplay',videoId:'terminal'}]} videos={[{id:'terminal',src:'https://drive.google.com/file/d/1uv2AjH0BxiddTdvc2Nadruy6lx2Z8uVS/preview'}]} />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

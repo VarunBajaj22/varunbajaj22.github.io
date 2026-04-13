@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<BaseLayout title="Varun Bajaj | Modeling & Animation" description="Maya 2018 models, textures, and animations by Varun Bajaj.">
+  <section class="section" style="padding-top: calc(var(--nav-height) + 3rem);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h1 class="section-title">Modeling, Texturing and Animation</h1>
+      </div>
+
+      <div class="card-grid">
+        <ProjectCard title="Chess Set" image="/images/maya/Chess.PNG" imageAlt="Maya chess set 3D model" tags={['Individual']} actions={[{label:'View 3D Model',url:'https://sketchfab.com/models/ac827c4c8b924b2aa04209bcfd885f4a'}]} />
+
+        <ProjectCard title="Axe" image="/images/maya/Axe.PNG" imageAlt="Maya axe 3D model" tags={['Individual']} actions={[{label:'View 3D Model',url:'https://sketchfab.com/models/73e8deebe4ce47be92bc34eb6ece7f3f'}]} />
+
+        <ProjectCard title="Hammer" image="/images/maya/Hammer.png" imageAlt="Maya hammer 3D model" tags={['Individual']} actions={[{label:'View 3D Model',url:'https://sketchfab.com/models/a9875759dd204c0d9fa16f1b329c5c3b'}]} />
+
+        <ProjectCard title="Chair" image="/images/maya/Chair.PNG" imageAlt="Maya chair 3D model" tags={['Individual']} actions={[{label:'View 3D Model',url:'https://sketchfab.com/models/4c9536a2d87e4c908be0ba66b72343d7'}]} />
+
+        <ProjectCard title="Candle Animation" image="/images/maya/candle.PNG" imageAlt="Maya candle animation" tags={['Individual']} actions={[{label:'View Animation',videoId:'candle'}]} videos={[{id:'candle',src:'https://drive.google.com/file/d/1J7MdJuSOg0miDQX27krskWUxno5fFsXo/preview'}]} />
+
+        <ProjectCard title="Mechanical Arm Animation" image="/images/maya/Mechanical_Arm.PNG" imageAlt="Maya mechanical arm animation" tags={['Individual']} actions={[{label:'View Animation',videoId:'arm'}]} videos={[{id:'arm',src:'https://drive.google.com/file/d/12inrVRYnrtKWSpzdRVBAwURR-r3rnSP-/preview'}]} />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

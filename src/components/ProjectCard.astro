@@ -1,0 +1,121 @@
+---
+export interface Action {
+  label: string;
+  url?: string;
+  download?: string;
+  videoId?: string;
+}
+
+export interface Video {
+  id: string;
+  src: string;
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  image: string;
+  imageAlt: string;
+  darkTitle?: boolean;
+  actions?: Action[];
+  videos?: Video[];
+  tags?: string[];
+}
+
+const { title, description, image, imageAlt, darkTitle = false, actions = [], videos = [], tags = [] } = Astro.props;
+const cardId = title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+---
+
+<article class="card fade-in">
+  <div class="card-image">
+    <img src={image} alt={imageAlt} loading="lazy" decoding="async" />
+    <div class="card-image-overlay">
+      {tags.length > 0 && (
+        <div class="card-tags">
+          {tags.map(t => <span class="tag">{t}</span>)}
+        </div>
+      )}
+      <h3 class:list={['card-title', { 'dark-title': darkTitle }]}>{title}</h3>
+    </div>
+  </div>
+  {description && (
+    <div class="card-body">
+      <p set:html={description} />
+    </div>
+  )}
+  {actions.length > 0 && (
+    <div class="card-actions">
+      {actions.map(action => {
+        if (action.videoId) {
+          const vid = videos.find(v => v.id === action.videoId);
+          return (
+            <button
+              class="btn btn-outline btn-sm video-toggle-btn"
+              data-video-id={`${cardId}-${action.videoId}`}
+              data-video-src={vid?.src}
+            >
+              {action.label}
+            </button>
+          );
+        }
+        const isInternalPage = action.url?.startsWith('/') && !action.url.match(/\.\w+$/);
+        return (
+          <a
+            class="btn btn-primary btn-sm"
+            href={action.url}
+            target={isInternalPage ? undefined : '_blank'}
+            rel={isInternalPage ? undefined : 'noopener noreferrer'}
+            download={action.download || undefined}
+          >
+            {action.label}
+          </a>
+        );
+      })}
+    </div>
+  )}
+  {videos.map(v => (
+    <div class="video-wrapper video-hidden" id={`${cardId}-${v.id}`}>
+      <iframe title={`${title} - ${v.id}`} loading="lazy" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  ))}
+</article>
+
+<style>
+  .dark-title {
+    color: #1a1a1a;
+    text-shadow: 0 1px 3px rgba(255,255,255,0.3);
+  }
+
+  .card-tags {
+    display: flex;
+    gap: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.video-toggle-btn').forEach(btn => {
+    const el = btn as HTMLButtonElement;
+    el.dataset.originalLabel = el.textContent?.trim() || 'View';
+
+    el.addEventListener('click', () => {
+      const videoId = el.dataset.videoId!;
+      const videoSrc = el.dataset.videoSrc!;
+      const wrapper = document.getElementById(videoId);
+      if (!wrapper) return;
+
+      const iframe = wrapper.querySelector('iframe')!;
+      const isHidden = wrapper.classList.contains('video-hidden');
+
+      if (isHidden) {
+        iframe.src = videoSrc;
+        wrapper.classList.remove('video-hidden');
+        el.textContent = 'Hide';
+      } else {
+        iframe.src = '';
+        wrapper.classList.add('video-hidden');
+        el.textContent = el.dataset.originalLabel || 'View';
+      }
+    });
+  });
+</script>

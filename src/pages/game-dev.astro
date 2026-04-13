@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<BaseLayout title="Varun Bajaj | Game Dev Processes" description="Game development processes, postmortems, risk assessments and quality assurance by Varun Bajaj.">
+  <section class="section" style="padding-top: calc(var(--nav-height) + 3rem);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h1 class="section-title">Game Development Processes</h1>
+      </div>
+
+      <div class="card-grid">
+        <ProjectCard
+          title="Tempest Quality Assurance Process"
+          description="Preparing a QA sheet for the popular arcade game, Tempest!"
+          image="/images/gamedev/tempest.jpg"
+          imageAlt="Tempest QA process documentation"
+          tags={['Individual']}
+          actions={[{ label: 'View', url: 'https://drive.google.com/file/d/1Fz--PJUun96ao1raksRV8y54uccBKkmU/view?usp=sharing' }]}
+        />
+
+        <ProjectCard
+          title="Risk Assessment"
+          description="Creating a feature-system matrix and a risk assessment grid for Donkey Kong."
+          image="/images/gamedev/donkey.jpg"
+          imageAlt="Donkey Kong risk assessment grid"
+          tags={['Individual']}
+          actions={[{ label: 'View', url: 'https://drive.google.com/file/d/1VogRhjb82St7Nmo7_3cUa4xxMNU2-207/view?usp=sharing' }]}
+        />
+
+        <ProjectCard
+          title="Game Postmortem"
+          description="Analysing the release and market performance of Call of Duty Modern Warfare."
+          image="/images/gamedev/mw.jpg"
+          imageAlt="Call of Duty Modern Warfare postmortem analysis"
+          tags={['Individual']}
+          actions={[{ label: 'View', url: 'https://drive.google.com/file/d/16uM6RvcOgK2kdurQnGfnDdJWntcoKMPr/view?usp=sharing' }]}
+        />
+
+        <ProjectCard
+          title="Blue Sky Open Idea Formation and Brainstorming"
+          description="A discussion about Blue Sky Open Idea Formation and Brainstorming."
+          image="/images/gamedev/idea.jpg"
+          imageAlt="Blue sky brainstorming process"
+          darkTitle={true}
+          tags={['Individual']}
+          actions={[{ label: 'View', url: 'https://drive.google.com/file/d/1TjyPSdlgYCU3ABY_FykDFwNghle1C8_J/view?usp=sharing' }]}
+        />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,223 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+
+const villaImages = Array.from({length: 6}, (_, i) => ({src: `/images/games/nexus/lwp/villa/LWP_Villa${i+1}.jpg`, alt: `Auditore Villa living world placement ${i+1}`}));
+const cultImages = Array.from({length: 11}, (_, i) => ({src: `/images/games/nexus/lwp/cult/LWP_Cult${i+1}.jpg`, alt: `Cult of Hermes living world placement ${i+1}`}));
+const monteImages = Array.from({length: 17}, (_, i) => ({src: `/images/games/nexus/lwp/monte/LWP_Monte${i+1}.jpg`, alt: `Montereggioni living world placement ${i+1}`}));
+const rizzoImages = Array.from({length: 29}, (_, i) => ({src: `/images/games/nexus/lwp/rizzo/LWP_Rizzo${i+1}.jpg`, alt: `Rizzo's Humiliations living world placement ${i+1}`}));
+const patrolImages = [
+  {src: '/images/games/nexus/patrols/PatrolsAndPickups_1.jpg', alt: 'Enemy patrols and pickups 1'},
+  {src: '/images/games/nexus/patrols/PatrolsAndPickups_2.jpg', alt: 'Enemy patrols and pickups 2'},
+  {src: '/images/games/nexus/patrols/PatrolsAndPickups_3.jpg', alt: 'Enemy patrols and pickups 3'},
+  {src: '/images/games/nexus/patrols/PatrolsAndPickups_4.jpg', alt: 'Enemy patrols and pickups 4'},
+  {src: '/images/games/nexus/patrols/PatrolsAndPickups_5.png', alt: 'Enemy patrols and pickups 5'},
+  {src: '/images/games/nexus/patrols/PatrolsAndPickups_6.png', alt: 'Enemy patrols and pickups 6'},
+];
+const redzoneImages = [
+  {src: '/images/games/nexus/redzone/RedZone_1.jpg', alt: 'Red zone setup 1'},
+  {src: '/images/games/nexus/redzone/RedZone_2.jpg', alt: 'Red zone setup 2'},
+  {src: '/images/games/nexus/redzone/RedZone_3.png', alt: 'Red zone setup 3'},
+  {src: '/images/games/nexus/redzone/RedZone_4.jpg', alt: 'Red zone setup 4'},
+];
+---
+
+<BaseLayout title="Varun Bajaj | Assassin's Creed Nexus" description="Level design work on Assassin's Creed Nexus — open map activities, living world placement, main mission assistance, enemy patrols, and red zone setups.">
+
+  <section class="section" style="padding-top: calc(var(--nav-height) + 3rem); padding-bottom: 0;">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h1 class="section-title" style="font-size: clamp(2rem, 5vw, 3rem);">Assassin's Creed Nexus</h1>
+        <p class="section-description">Worked as a Level Designer in collaboration with Ubisoft's Red Storm Entertainment, Ubisoft D&uuml;sseldorf, and Ubisoft Reflections.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Open Map Activities -->
+  <section class="section section-alt" id="oma">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Open Map Activities</h2>
+        <p class="section-description">I designed and implemented open map activities/side challenges in multiple levels (Return to Monteriggioni, Monteriggioni Tunnels, Rizzo's Humiliations, The Final Humiliation, Cult of Hermes and Siege Of Boston) and helped integrating first passes and polishing open map activities in other levels during various stages of development and tweaking the activities based on Rational Level Design. I was also responsible for the open map activities integration in the Vertical Slice of the game during development.</p>
+      </div>
+
+      <div class="card-grid">
+        <ProjectCard title="Golden Constructs" description="Created Parkour Challenges in the Italy and Boston settings. Levels — Rizzo's Humiliations, Cult of Hermes, Siege of Boston." image="/images/games/nexus/oma/GoldenThumbnail.png" imageAlt="Golden Constructs parkour challenges" actions={[{label:'View Work',videoId:'golden'}]} videos={[{id:'golden',src:'https://drive.google.com/file/d/1CcCrHJ7Tz3wuanq5id6ue8psp69_3EQ7/preview'}]} />
+
+        <ProjectCard title="Silver Constructs" description="Designed and implemented shooting/aiming challenges with moving targets in the Italy and Boston settings. Levels — Rizzo's Humiliations, Cult of Hermes, Siege of Boston." image="/images/games/nexus/oma/SilverThumbnail.png" imageAlt="Silver Constructs shooting challenges" actions={[{label:'View Work',videoId:'silver'}]} videos={[{id:'silver',src:'https://drive.google.com/file/d/1HnFfnZLwy-c7KKKZ4e4jo2kHZHlchESC/preview'}]} />
+
+        <ProjectCard title="Platinum Constructs" description="Placed collectibles at high locations to serve as climbing challenges in the Italy and Boston settings. Levels — Return to Monteriggioni, Rizzo's Humiliations, Cult of Hermes, Siege of Boston." image="/images/games/nexus/oma/PlatinumThumbnail.png" imageAlt="Platinum Constructs climbing challenges" actions={[{label:'View Work',videoId:'platinum'}]} videos={[{id:'platinum',src:'https://drive.google.com/file/d/1irx9ioq9bIxth364n3idOc6N-L35c0FJ/preview'}]} />
+
+        <ProjectCard title="Historical Constructs" description="Placed collectibles that gave the player more historical information about the locations they were visiting in the Italy and Boston settings. Levels — Return to Monteriggioni, Monteriggioni Tunnels, Rizzo's Humiliations, Cult of Hermes, Siege of Boston." image="/images/games/nexus/oma/HistoricalThumbail.png" imageAlt="Historical Constructs collectibles" actions={[{label:'View Work',videoId:'historical'}]} videos={[{id:'historical',src:'https://drive.google.com/file/d/1Jk3k10NjZTgGDNCwuMdF4-O60c733Wy-/preview'}]} />
+      </div>
+    </div>
+  </section>
+
+  <!-- Living World Placement -->
+  <section class="section" id="lwp">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Living World Placement</h2>
+        <p class="section-description">I had complete ownership of living world placement (Civilian NPCs — NPC placement, realization, movement paths etc.) in multiple levels — Montereggioni, Auditore Villa (including placing conversations), Rizzo's Humiliations and Cult of Hermes. I was also responsible for the living world placement in the Vertical Slice of the game during development.</p>
+      </div>
+
+      <!-- Auditore Villa -->
+      <h3 class="section-subtitle fade-in">Auditore Villa</h3>
+      <div class="gallery-grid fade-in">
+        {villaImages.map(img => (
+          <div class="gallery-item" data-lightbox>
+            <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
+          </div>
+        ))}
+      </div>
+
+      <!-- Cult of Hermes -->
+      <h3 class="section-subtitle fade-in">Cult of Hermes</h3>
+      <div class="gallery-grid fade-in">
+        {cultImages.map(img => (
+          <div class="gallery-item" data-lightbox>
+            <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
+          </div>
+        ))}
+        <div class="gallery-item gallery-video-thumb" data-video-src="https://drive.google.com/file/d/1Q0qQzuUnq3jtZSG5ZL6LmhLOF18WjJ0_/preview">
+          <img src="/images/games/nexus/lwp/cult/LWP_Cult_video_thumb.png" alt="Cult of Hermes living world placement video" loading="lazy" decoding="async" />
+          <div class="play-overlay"><span class="play-icon">&#9654;</span></div>
+        </div>
+      </div>
+
+      <!-- Montereggioni -->
+      <h3 class="section-subtitle fade-in">Montereggioni</h3>
+      <div class="gallery-grid fade-in">
+        {monteImages.map(img => (
+          <div class="gallery-item" data-lightbox>
+            <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
+          </div>
+        ))}
+      </div>
+
+      <!-- Rizzo's Humiliations -->
+      <h3 class="section-subtitle fade-in">Rizzo's Humiliations</h3>
+      <div class="gallery-grid fade-in">
+        {rizzoImages.map(img => (
+          <div class="gallery-item" data-lightbox>
+            <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
+          </div>
+        ))}
+        <div class="gallery-item gallery-video-thumb" data-video-src="https://drive.google.com/file/d/18Rv4oc8coQUR6li8mPtv5rI8NSL7TZwP/preview">
+          <img src="/images/games/nexus/lwp/rizzo/LWP_Rizzo_video_thumb.png" alt="Rizzo's Humiliations living world placement video" loading="lazy" decoding="async" />
+          <div class="play-overlay"><span class="play-icon">&#9654;</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Mission Assistance -->
+  <section class="section section-alt" id="missions">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Main Mission Assistance</h2>
+        <p class="section-description">I got the opportunity to assist with the main missions as well. A main mission I assisted with extensively was Rizzo's Humiliations. This also involved NPC placements, walk paths and densities to make the tailing sections feel more immersive. I also worked on small nuances like Heralds changing dialogue after mission beats to tell the player that what they are doing is having a direct effect on the game world.</p>
+      </div>
+
+      <h3 class="section-subtitle fade-in">Rizzo's Humiliations — Mission Walkthrough</h3>
+      <div class="card-grid--centered fade-in">
+        <article class="card">
+          <a href="https://www.youtube.com/watch?v=MVUq_pYw5m8" target="_blank" rel="noopener noreferrer" class="card-image">
+            <img src="https://img.youtube.com/vi/MVUq_pYw5m8/hqdefault.jpg" alt="Rizzo's Humiliations mission walkthrough on YouTube" loading="lazy" decoding="async" />
+          </a>
+          <div class="card-body">
+            <p>A walkthrough of the Rizzo's Humiliations main mission.</p>
+          </div>
+          <div class="card-actions">
+            <a class="btn btn-primary btn-sm" href="https://www.youtube.com/watch?v=MVUq_pYw5m8" target="_blank" rel="noopener noreferrer">Watch Mission</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Open World Enemy Patrols and Pickups -->
+  <section class="section" id="patrols">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Open World Enemy Patrols and Pickups</h2>
+        <p class="section-description">I was responsible for scripting and placing enemies and creating the patrol paths in the open world of multiple levels including the placement of pickups like ammo for the player. Levels include Siege of Boston, Cult of Hermes and Rizzo's Humiliations. This also involved scripting of enemies in different states (on high alert vs actively engaged in war during different beats in the mission).</p>
+      </div>
+
+      <div class="gallery-grid fade-in">
+        {patrolImages.map(img => (
+          <div class="gallery-item" data-lightbox>
+            <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Red Zone Setups -->
+  <section class="section section-alt" id="redzones">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Red Zone Setups</h2>
+        <p class="section-description">I was also responsible for creating red zones (alert zones in multiple levels) including the enemy placements, patrols, player pickups and their realization. Levels include Cult of Hermes, Siege of Boston and Rizzo's Humiliations.</p>
+      </div>
+
+      <div class="gallery-grid fade-in">
+        {redzoneImages.map(img => (
+          <div class="gallery-item" data-lightbox>
+            <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox dialog -->
+  <dialog class="lightbox" id="lightbox-dialog">
+    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <img src="" alt="" id="lightbox-img" />
+    <iframe id="lightbox-video" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+  </dialog>
+
+</BaseLayout>
+
+<script>
+  const dialog = document.getElementById('lightbox-dialog') as HTMLDialogElement;
+  const dialogImg = document.getElementById('lightbox-img') as HTMLImageElement;
+  const dialogVideo = document.getElementById('lightbox-video') as HTMLIFrameElement;
+  const closeBtn = dialog.querySelector('.lightbox-close')!;
+
+  function closeLightbox() {
+    dialog.close();
+    dialogImg.src = '';
+    dialogImg.style.display = 'none';
+    dialogVideo.src = '';
+    dialogVideo.style.display = 'none';
+  }
+
+  document.querySelectorAll('[data-lightbox]').forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img')!;
+      dialogImg.src = img.src;
+      dialogImg.alt = img.alt;
+      dialogImg.style.display = 'block';
+      dialogVideo.style.display = 'none';
+      dialog.showModal();
+    });
+  });
+
+  document.querySelectorAll('.gallery-video-thumb').forEach(item => {
+    item.addEventListener('click', () => {
+      const src = (item as HTMLElement).dataset.videoSrc!;
+      dialogVideo.src = src;
+      dialogVideo.style.display = 'block';
+      dialogImg.style.display = 'none';
+      dialog.showModal();
+    });
+  });
+
+  closeBtn.addEventListener('click', closeLightbox);
+  dialog.addEventListener('click', (e) => {
+    if (e.target === dialog) closeLightbox();
+  });
+</script>

@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<BaseLayout title="Varun Bajaj | Game Design" description="Game design critiques, pitches, and design documents by Varun Bajaj.">
+  <section class="section" style="padding-top: calc(var(--nav-height) + 3rem);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h1 class="section-title">Game Design</h1>
+      </div>
+
+      <div class="card-grid">
+        <ProjectCard
+          title="Escape Room Critique"
+          description="Critiquing the world's most popular puzzle experience!"
+          image="/images/gamedesign/escape.jpg"
+          imageAlt="Escape room game design critique"
+          tags={['Individual']}
+          actions={[{ label: 'Read', url: 'https://medium.com/@varunbajaj/escape-rooms-a-game-design-critique-63abf405e6b8' }]}
+        />
+
+        <ProjectCard
+          title="Crash Bandicoot Critique"
+          description="Critiquing this 1996 classic!"
+          image="/images/gamedesign/crash.jpg"
+          imageAlt="Crash Bandicoot game design critique"
+          tags={['Individual']}
+          actions={[{ label: 'Read', url: 'https://link.medium.com/m3kIWsmQ0qb' }]}
+        />
+
+        <ProjectCard
+          title="Uncharted 2: Among Thieves Critique"
+          description="Critiquing Naughty Dog's finest!"
+          image="/images/gamedesign/uncharted.jpg"
+          imageAlt="Uncharted 2 Among Thieves critique"
+          tags={['Individual']}
+          actions={[{ label: 'Read', url: 'https://link.medium.com/mOLlXTkQ0qb' }]}
+        />
+
+        <ProjectCard
+          title="Life is Strange Critique"
+          description="Critiquing this choice-driven interactive narrative storytelling experience!"
+          image="/images/gamedesign/lis.jpg"
+          imageAlt="Life is Strange game critique"
+          tags={['Individual']}
+          actions={[{ label: 'Read', url: 'https://link.medium.com/eopZGxbsppb' }]}
+        />
+
+        <ProjectCard
+          title="Word of the Grey"
+          description="A complete Game Design Document for a one-of-a-kind 2D puzzle platformer."
+          image="/images/gamedesign/wotg.jpg"
+          imageAlt="Word of the Grey game design document"
+          tags={['Group']}
+          actions={[{ label: 'Game Design Document', url: 'https://drive.google.com/file/d/19PFEwsIob7_YlmpJV5jh3RryWJNf-4S4/view?usp=sharing' }]}
+        />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

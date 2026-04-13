@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+
+<BaseLayout title="Varun Bajaj | VR Game Dev" description="VR Escape Room game developed using Unity 3D, showcased at Imagine RIT 2018.">
+  <section class="section" style="padding-top: calc(var(--nav-height) + 3rem);">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h1 class="section-title">VR Game Dev</h1>
+      </div>
+
+      <div class="card-grid--centered">
+        <ProjectCard
+          title="Escape Room VR"
+          description="Creating an Escape Room game playable in Virtual Reality, using Unity 3D."
+          image="/images/vr_game_dev/prod_studio.gif"
+          imageAlt="Escape Room VR game development"
+          tags={['Group']}
+          actions={[
+            { label: 'Download Game', url: 'https://drive.google.com/file/d/1egLwqvuBlQrz1Q2yid_dOb3lwLzldomG/view?usp=sharing' },
+            { label: 'Level 1 Pitch', videoId: 'lvl1' },
+            { label: 'Level 2 Pitch', videoId: 'lvl2' },
+            { label: 'Walkthrough', videoId: 'walkthrough' },
+            { label: 'Game Design Document', url: 'https://drive.google.com/file/d/1vjOmxKLLtA21K7dQnXebfymWCfLTu_KQ/view?usp=sharing' },
+          ]}
+          videos={[
+            { id: 'lvl1', src: 'https://drive.google.com/file/d/1B5jQ9QmgjkiwU7QVr_eVTFrW8XMGVLwB/preview' },
+            { id: 'lvl2', src: 'https://drive.google.com/file/d/1di8P8_xsXO2puxfIfbOoJEK-5xOpw3rj/preview' },
+            { id: 'walkthrough', src: 'https://drive.google.com/file/d/1qaj9gJXuA1F1nhprzy7VZgewV7JoQWc9/preview' },
+          ]}
+        />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

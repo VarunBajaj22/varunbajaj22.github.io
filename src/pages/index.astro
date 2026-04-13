@@ -1,0 +1,611 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { resume } from '../data/socials';
+---
+
+<BaseLayout title="Varun Bajaj | Level Designer" description="Game Level Designer at Ubisoft. Showcasing level design work on Assassin's Creed Nexus, Prince of Persia, and more.">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1 class="hero-name">Varun Bajaj</h1>
+        <p class="hero-role">Mission / Level Designer at <span class="accent">Ubisoft</span></p>
+        <p class="hero-tagline">I love creating spaces that help facilitate fun and engaging gameplay!</p>
+        <div class="hero-actions">
+          <a href={resume.url} class="btn btn-primary" download={resume.download}>{resume.label}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission / Level Design Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Mission / Level Design</h2>
+      </div>
+
+      <div class="card-grid">
+        <ProjectCard
+          title="Assassin's Creed Nexus"
+          description="Worked as a Level Designer in collaboration with Ubisoft's Red Storm Entertainment, Ubisoft Düsseldorf, and Ubisoft Reflections."
+          image="/images/home/ac_vr.jpg"
+          imageAlt="Assassin's Creed Nexus VR gameplay screenshot"
+          tags={['Ubisoft', 'VR']}
+          actions={[{ label: 'View Work', url: '/projects/nexus' }]}
+        />
+
+        <ProjectCard
+          title="Prince of Persia: The Sands of Time Remake"
+          description="Worked as a Junior Technical Level Designer responsible for scripting cinematics and cutscenes, creating scripted events, setting up landscape cameras, and recording sand vision shots."
+          image="/images/home/sotremake.jpg"
+          imageAlt="Prince of Persia Sands of Time Remake key art"
+          tags={['Ubisoft']}
+          actions={[{ label: 'Trailer', url: 'https://www.youtube.com/watch?v=htzq7EEXQs8' }]}
+        />
+
+        <ProjectCard
+          title="Lightless"
+          description="Level Designer/Game Designer on a 3D puzzle game in which you must make use of light to manipulate enemies and the environment. Showcased at GDC 2019."
+          image="/images/home/lightless_banner.png"
+          imageAlt="Lightless game puzzle screenshot"
+          tags={['Group', 'GDC 2019']}
+          actions={[
+            { label: 'Trailer', url: 'https://www.youtube.com/watch?v=Kax36bQDNnA' },
+            { label: 'My Work', videoId: 'lightless' },
+            { label: 'My Research', url: 'https://link.medium.com/OxJha3zDvpb' },
+            { label: 'Play', url: 'https://lightanic-studios.itch.io/lightless' },
+          ]}
+          videos={[{ id: 'lightless', src: 'https://drive.google.com/file/d/1d0TF8PJEiHFrw5P9dAZeIGr-ya7hMSte/preview' }]}
+        />
+
+        <ProjectCard
+          title="Lost and Found"
+          description="Level Designer/Game Designer on an Action/Adventure game I pitched and am developing using Unreal Engine 5, about a girl named Faith who makes her way into the depths of Egypt to rescue her missing brother."
+          image="/images/home/lostandfound_banner.jpg"
+          imageAlt="Lost and Found game concept art"
+          tags={['Individual', 'UE5']}
+          actions={[
+            { label: 'One Pager', url: 'https://drive.google.com/file/d/1g0tDuZd3jZVKGtba3Tpfy6aHJTYbA7R4/view' },
+            { label: 'Level Design Blueprint', url: 'https://drive.google.com/file/d/18Mi--05PXsa2Ed97HEjU6WJkOjODbij9/view' },
+            { label: 'Level Design Document', url: 'https://drive.google.com/file/d/1i9rHqIoYyX75OR3Z_mjAPPrQmxJvfdLm/view' },
+            { label: 'Watch Gameplay', videoId: 'lf' },
+          ]}
+          videos={[{ id: 'lf', src: 'https://drive.google.com/file/d/1u6ne93BtFak1B-j_ju6pslaxdhM9WTWt/preview' }]}
+        />
+
+        <ProjectCard
+          title="Volume Level Design"
+          description="Created a level using the level editor provided with the game 'Volume'. Collect all the gems and escape without being spotted!"
+          image="/images/home/volume_banner.png"
+          imageAlt="Volume level design screenshot"
+          tags={['Individual']}
+          actions={[
+            { label: 'Watch Gameplay', url: 'https://youtu.be/4PhSxd1huI4' },
+            { label: 'Level Design Notes', url: 'https://drive.google.com/file/d/1vJzpJPD4uV2AVCxkAALWNiCc3cPReSYQ/view?usp=drivesdk' },
+          ]}
+        />
+
+        <ProjectCard
+          title="Fall Guys Level Design"
+          description="'Door Smash' — a multiplayer race level made using the Creative Construction Level Editor in Fall Guys! Level Code: 4242-2361-1639."
+          image="/images/home/fall_guys_banner.png"
+          imageAlt="Fall Guys Door Smash level screenshot"
+          darkTitle={true}
+          tags={['Individual']}
+          actions={[
+            { label: 'Watch Gameplay', url: 'https://youtu.be/jCwGjbgt9l0' },
+            { label: 'Level Design Notes', url: 'https://drive.google.com/file/d/1wMMOLkNG4sHFlLRK3Pz5q7z2aHCj3W-B/view?usp=drivesdk' },
+          ]}
+        />
+
+        <ProjectCard
+          title="Portal Level Design"
+          description="Creating a community test chamber using the Portal 2 level editor!"
+          image="/images/leveldesign/Portal-Pic.png"
+          imageAlt="Portal 2 test chamber level design"
+          darkTitle={true}
+          tags={['Individual']}
+          actions={[
+            { label: 'Watch Gameplay', videoId: 'portal' },
+            { label: 'Level Design Document', url: 'https://drive.google.com/file/d/1hyOzs5jlIkaJropNBl0YWZsIZGpFFFHN/view?usp=sharing' },
+            { label: 'Steam Workshop', url: 'https://steamcommunity.com/sharedfiles/filedetails/?id=1667976257' },
+          ]}
+          videos={[{ id: 'portal', src: 'https://drive.google.com/file/d/16pOWuimwEZDDEjzE8ltC8So7PXwWxa2E/preview' }]}
+        />
+
+        <ProjectCard
+          title="GTA 5 Transform Race Design"
+          description="Designing a race using the GTA 5 level editor."
+          image="/images/leveldesign/l3.png"
+          imageAlt="GTA 5 Transform Race level layout"
+          tags={['Individual']}
+          actions={[
+            { label: 'Level Layout', url: 'https://drive.google.com/file/d/16V_9S-T0rY9TfR6voyRcjoqfZm9nvaHu/view?usp=sharing' },
+            { label: 'Initial Level', videoId: 'gta1' },
+            { label: 'Iteration 1', videoId: 'gta2' },
+            { label: 'Iteration 2', videoId: 'gta3' },
+            { label: 'Iteration 3', videoId: 'gta4' },
+          ]}
+          videos={[
+            { id: 'gta1', src: 'https://drive.google.com/file/d/1vwVwgE2MBROwquqjWnFml2K3TajNz3fI/preview' },
+            { id: 'gta2', src: 'https://drive.google.com/file/d/12O9NuPw6cw3d1geURkL34NpbaWEDh1WC/preview' },
+            { id: 'gta3', src: 'https://drive.google.com/file/d/1aHs_Y8apLAiXaRRFbyni-kBd2eXQCsIG/preview' },
+            { id: 'gta4', src: 'https://drive.google.com/file/d/1DZHmP-7iZIZX0z8tqA5TTLSiRD4qNgs8/preview' },
+          ]}
+        />
+
+        <ProjectCard
+          title="Golf With Your Friends"
+          description="A Christmas themed 18 hole course I designed using the in-game level editor with gradually increasing difficulty!"
+          image="/images/leveldesign/golfbanner.jpg"
+          imageAlt="Golf With Your Friends custom Christmas course"
+          darkTitle={true}
+          tags={['Individual']}
+          actions={[
+            { label: 'Watch Gameplay', videoId: 'golf' },
+            { label: 'Steam Workshop', url: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2333713135' },
+          ]}
+          videos={[{ id: 'golf', src: 'https://drive.google.com/file/d/1uvxc6_G1zo23wUfEBw2ZUsWBLv5yzQDf/preview' }]}
+        />
+
+        <ProjectCard
+          title="Far Cry Level Design"
+          description="Creating a level using the Far Cry Level Editor! Find a way off the island as soon as possible!"
+          image="/images/leveldesign/Far Cry Level Editor.PNG"
+          imageAlt="Far Cry level editor island design"
+          tags={['Individual']}
+          actions={[{ label: 'Watch Gameplay', videoId: 'farcry' }]}
+          videos={[{ id: 'farcry', src: 'https://drive.google.com/file/d/1yl6xw1h-4DZs6RrGdTV6bM6TIbL-rt6m/preview' }]}
+        />
+
+        <ProjectCard
+          title="Enemy-based Level Design"
+          description="Making levels specifically tailored to the enemies in your game, and my level design process!"
+          image="/images/leveldesign/Stunner3.png"
+          imageAlt="Enemy-based level design diagram"
+          tags={['Individual']}
+          actions={[{ label: 'Read', url: 'https://link.medium.com/OxJha3zDvpb' }]}
+        />
+
+        <ProjectCard
+          title="INSIDE Level Analysis"
+          description="Analysing a level from Playdead's INSIDE."
+          image="/images/leveldesign/l4.jpg"
+          imageAlt="INSIDE game level analysis"
+          tags={['Individual']}
+          actions={[{ label: 'Read', url: 'https://drive.google.com/file/d/1nSrDGMwnrPdKLS2-cU4nC0wT1aQpc17S/view?usp=sharing' }]}
+        />
+
+        <ProjectCard
+          title="Titanfall 2 Level Analysis"
+          description="Analysing a level from Respawn's Titanfall 2."
+          image="/images/leveldesign/l5.jpg"
+          imageAlt="Titanfall 2 level analysis"
+          tags={['Individual']}
+          actions={[{ label: 'Read', url: 'https://drive.google.com/file/d/1pa-D0HbWXmTUMsOa00OLJELx_51WV5wU/view?usp=sharing' }]}
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Work Categories -->
+  <section class="section section-alt" id="other-work">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Other Work</h2>
+      </div>
+
+      <div class="card-grid card-grid--hub">
+        <a href="/gameplay-prototyping" class="hub-card fade-in">
+          <img src="/images/home/gameplay.jpeg" alt="Gameplay prototyping projects" loading="lazy" decoding="async" />
+          <div class="hub-card-content">
+            <h3>Gameplay & Prototyping</h3>
+            <p>Weekly individual and team-based game jams!</p>
+          </div>
+        </a>
+
+        <a href="/game-design" class="hub-card fade-in">
+          <img src="/images/home/gamedesign.JPG" alt="Game design critique work" loading="lazy" decoding="async" />
+          <div class="hub-card-content">
+            <h3>Game Design</h3>
+            <p>Critiques, Pitches and Design Documents.</p>
+          </div>
+        </a>
+
+        <a href="/game-dev" class="hub-card fade-in">
+          <img src="/images/home/tempest.jpg" alt="Game development processes" loading="lazy" decoding="async" />
+          <div class="hub-card-content">
+            <h3>Game Dev Processes</h3>
+            <p>Development Methods, Postmortems, Risk Assessments and Quality Assurance.</p>
+          </div>
+        </a>
+
+        <a href="/maya" class="hub-card fade-in">
+          <img src="/images/home/maya.jpeg" alt="Maya 3D modeling work" loading="lazy" decoding="async" />
+          <div class="hub-card-content">
+            <h3>Modeling & Animation</h3>
+            <p>Using Maya 2018 to make object and character models, texture them and create animations!</p>
+          </div>
+        </a>
+
+        <a href="/vr-game-dev" class="hub-card fade-in">
+          <img src="/images/home/production_studio.jpeg" alt="VR game development" loading="lazy" decoding="async" />
+          <div class="hub-card-content">
+            <h3>VR Game Dev</h3>
+            <p>Designing and Developing a VR Escape Room game, showcased at Imagine RIT 2018.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">About Me</h2>
+      </div>
+
+      <div class="about-grid fade-in">
+        <div class="about-photo">
+          <img src="/images/home/me.jpg" alt="Varun Bajaj" loading="lazy" decoding="async" />
+        </div>
+        <div class="about-content">
+          <p class="about-intro">
+            I work as a <strong>Level Designer</strong> at <strong class="accent">Ubisoft India</strong> in Pune, India.
+            I graduated with my <strong>MS in Game Design and Development</strong> from <strong class="accent">Rochester Institute of Technology</strong> in May 2019!
+          </p>
+
+          <div class="about-details">
+            <div class="detail-group">
+              <h4>Software</h4>
+              <p>Anvil, Unreal Engine, Unity 3D, Maya, Adobe Premiere Pro</p>
+            </div>
+            <div class="detail-group">
+              <h4>Languages</h4>
+              <p>C#, Blueprint</p>
+            </div>
+            <div class="detail-group">
+              <h4>Interests</h4>
+              <p>Level Design, Game Design, Game Development, Video Editing</p>
+            </div>
+          </div>
+
+          <div class="experience">
+            <h4>Experience</h4>
+            <ul class="exp-list">
+              <li>
+                <strong>Level Designer</strong> at <a href="https://india.ubisoft.com" target="_blank" rel="noopener noreferrer">Ubisoft India</a>
+                <ul>
+                  <li>Worked on Assassin's Creed Nexus</li>
+                  <li>Currently working on an Unannounced Project</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Junior Technical Level Designer</strong> at <a href="https://india.ubisoft.com" target="_blank" rel="noopener noreferrer">Ubisoft India</a>
+                <ul><li>Worked on Prince of Persia: The Sands of Time Remake</li></ul>
+              </li>
+              <li><strong>Conference Associate</strong> at <a href="https://gdconf.com/" target="_blank" rel="noopener noreferrer">GDC 2019</a></li>
+              <li>
+                <strong>Instructor</strong> at <a href="https://www.idtech.com" target="_blank" rel="noopener noreferrer">iD Tech</a> (May–Aug 2018)
+              </li>
+              <li>
+                <strong>Game Developer Intern</strong> at <a href="https://xrlabs.co/" target="_blank" rel="noopener noreferrer">XR Labs</a> (May–Jul 2016)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="certs-section fade-in">
+        <h3 class="section-subtitle">Certifications</h3>
+        <div class="certs-grid">
+          <img src="/images/home/RIT_certificate.png" alt="RIT Certificate" loading="lazy" decoding="async" />
+          <img src="/images/home/art_of_level_design.jpg" alt="Art of Level Design Certificate" loading="lazy" decoding="async" />
+          <img src="/images/home/udemy-blueprint-gamedev.jpg" alt="Udemy Blueprint Game Dev Certificate" loading="lazy" decoding="async" />
+          <img src="/images/home/udemy-leveldesign.jpg" alt="Udemy Level Design Certificate" loading="lazy" decoding="async" />
+          <img src="/images/home/mit.jpg" alt="MIT Certificate" loading="lazy" decoding="async" />
+          <img src="/images/home/ue4.jpg" alt="Unreal Engine 4 Certificate" loading="lazy" decoding="async" />
+          <img src="/images/home/BEC.jpg" alt="BEC Certificate" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <dialog class="lightbox" id="cert-lightbox">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <img src="" alt="" id="cert-lightbox-img" />
+      </dialog>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding-top: var(--nav-height);
+    background: linear-gradient(135deg, var(--bg-primary) 0%, #0d0d1a 50%, var(--bg-primary) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-name {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-role {
+    font-size: clamp(1.2rem, 3vw, 1.75rem);
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+  }
+
+  .accent {
+    color: var(--accent-primary);
+  }
+
+  .hero-tagline {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* Alt section */
+  .section-alt {
+    background: var(--bg-secondary);
+  }
+
+  /* Hub cards */
+  .card-grid--hub {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  .hub-card {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    display: block;
+    transition: transform var(--transition-med), box-shadow var(--transition-med);
+    text-decoration: none;
+  }
+
+  .hub-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .hub-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-med);
+  }
+
+  .hub-card:hover img {
+    transform: scale(1.08);
+  }
+
+  .hub-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 1.25rem 1.25rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+  }
+
+  .hub-card-content h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.25rem;
+  }
+
+  .hub-card-content p {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+  }
+
+  /* About */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .about-photo img {
+    border-radius: var(--radius-md);
+    width: 100%;
+  }
+
+  .about-intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+  }
+
+  .about-intro strong {
+    color: var(--text-primary);
+  }
+
+  .about-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .detail-group h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.4rem;
+  }
+
+  .detail-group p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+
+  .experience h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+
+  .exp-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .exp-list > li {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .exp-list > li strong {
+    color: var(--text-primary);
+  }
+
+  .exp-list ul {
+    list-style: none;
+    margin-top: 0.3rem;
+    padding-left: 1rem;
+  }
+
+  .exp-list ul li::before {
+    content: '—';
+    margin-right: 0.5rem;
+    color: var(--text-muted);
+  }
+
+  /* Certifications */
+  .certs-section {
+    margin-top: 4rem;
+  }
+
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .certs-grid img {
+    border-radius: var(--radius-sm);
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform var(--transition-fast);
+  }
+
+  .certs-grid img:hover {
+    transform: scale(1.03);
+  }
+
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .about-photo {
+      max-width: 200px;
+      margin: 0 auto;
+    }
+
+    .card-grid--hub {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .card-grid--hub {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  const certDialog = document.getElementById('cert-lightbox') as HTMLDialogElement;
+  const certImg = document.getElementById('cert-lightbox-img') as HTMLImageElement;
+  const certClose = certDialog.querySelector('.lightbox-close')!;
+
+  document.querySelectorAll('.certs-grid img').forEach(img => {
+    img.addEventListener('click', () => {
+      const el = img as HTMLImageElement;
+      certImg.src = el.src;
+      certImg.alt = el.alt;
+      certImg.style.display = 'block';
+      certDialog.showModal();
+    });
+  });
+
+  certClose.addEventListener('click', () => { certDialog.close(); certImg.src = ''; });
+  certDialog.addEventListener('click', (e) => {
+    if (e.target === certDialog) { certDialog.close(); certImg.src = ''; }
+  });
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Varun Bajaj",
+  "jobTitle": "Level Designer",
+  "worksFor": { "@type": "Organization", "name": "Ubisoft India" },
+  "url": "https://varunbajaj22.github.io",
+  "sameAs": [
+    "https://www.linkedin.com/in/VarunBajaj22",
+    "https://www.twitter.com/VarunBajaj22",
+    "https://www.youtube.com/PhoenixFruitloops"
+  ]
+}
+</script>

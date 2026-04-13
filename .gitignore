@@ -1,4 +1,5 @@
-Nexus/
+# Only ignore a legacy top-level folder, not public/.../nexus/ (case-insensitive FS matched that)
+/Nexus/
 node_modules/
 dist/
 .astro/

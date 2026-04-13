@@ -1,0 +1,14 @@
+# This repo is built with Astro, not Jekyll. If GitHub Pages runs Jekyll on the
+# branch (legacy "Deploy from branch"), exclude Astro source so .astro files are
+# not parsed as YAML (their --- frontmatter breaks Jekyll).
+exclude:
+  - src
+  - node_modules
+  - public
+  - astro.config.mjs
+  - tsconfig.json
+  - package.json
+  - package-lock.json
+  - dist
+  - .astro
+  - .github

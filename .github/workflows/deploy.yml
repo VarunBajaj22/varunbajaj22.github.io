@@ -1,3 +1,5 @@
+# Build with Astro and deploy dist/ — do not use the default "Jekyll" Pages workflow.
+# Repo Settings → Pages → Build: GitHub Actions → use this workflow only.
 name: Deploy to GitHub Pages
 
 on:

@@ -1,0 +1,176 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const missionVideos = [
+  { title: 'Marooned', id: '1uIx4nrXsOw', url: 'https://youtu.be/1uIx4nrXsOw?si=M98jbce4BBc0vv7S' },
+  { title: 'Nothing is True', id: 't4SjO-muMYA', url: 'https://youtu.be/t4SjO-muMYA?si=4iEn_Fqnf6V2Hi5x' },
+];
+const contractVideos = [
+  { title: 'The Treasure Hunter', id: '7xRYTRb2IsA', url: 'https://youtu.be/7xRYTRb2IsA?si=RHbgCz4HCdIhCmja' },
+  { title: 'Tomb Raiders', id: 'myGv4YINY8E', url: 'https://youtu.be/myGv4YINY8E?si=EBz0Je4DpOkzRLa4' },
+];
+const templarVideos = [
+  { title: 'Right-Hand Man', id: '1u7B_5JU4lo', url: 'https://youtu.be/1u7B_5JU4lo?si=b0XFZmQZp4ILU1FG' },
+];
+const locationVideos = [
+  { title: 'Isla Providencia Island Layout and Parkour Design', id: 'NH3qUAExWc4', url: 'https://youtu.be/NH3qUAExWc4?si=ykLi9eLOpPqS7nnw' },
+  { title: 'Isla Providencia All Activities and Collectibles', id: 'Som7QdHg8LI', url: 'https://youtu.be/Som7QdHg8LI?si=Z6SuzLfF_oxxeTmB' },
+  { title: 'Isla Providencia Red Zone', id: 'hweYQhK9fjc', url: 'https://youtu.be/hweYQhK9fjc?si=s0oCgdsKRLpzpUGy' },
+  { title: 'Isla Providencia Save The Pirates', id: 'EDcLfW98AnU', url: 'https://youtu.be/EDcLfW98AnU?si=4isd1ZPRY-g0WesL' },
+  { title: 'Isla Providencia Micro Event', id: 'jMUuZ0kaeEo', url: 'https://youtu.be/jMUuZ0kaeEo?si=beqJVIjdc9_17twx' },
+  { title: 'Isla Providencia Sync Points', id: 'n1JWt8qkS1U', url: 'https://youtu.be/n1JWt8qkS1U?si=kAL_cLJkkyFmFJMv' },
+  { title: 'Misteriosa Island L0 Design', id: 'Acu-TcykqS4', url: 'https://youtu.be/Acu-TcykqS4?si=XzsB8siscuH7FJSg' },
+  { title: 'Tulum Island Parkour Design', id: '2V1mmqPCCTo', url: 'https://youtu.be/2V1mmqPCCTo?si=pQCIGU1DBtkQPgMt' },
+  { title: 'Pinos Isle New Layout Design', id: 'mNMR2cqCWnk', url: 'https://youtu.be/mNMR2cqCWnk?si=_XsdhgV_GIV9Oiyk' },
+];
+---
+
+<BaseLayout title="Varun Bajaj | Assassin's Creed Black Flag Resynced" description="Mission and location design work on Assassin's Creed Black Flag Resynced.">
+  <section class="section" style="padding-top: calc(var(--nav-height) + 3rem); padding-bottom: 0;">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h1 class="section-title" style="font-size: clamp(2rem, 5vw, 3rem);">Assassin's Creed Black Flag Resynced</h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="main-missions">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Main Missions</h2>
+        <p class="section-description">Designed and implemented 2 main missions. This included everything from redesigning the original mission flows, implementation of objectives, dialogues, cutscenes, enemy placements, enemy patrols, real-time chases, layout changes and more!</p>
+      </div>
+      <div class="card-grid">
+        {missionVideos.map(video => (
+          <article class="card youtube-card fade-in">
+            <a class="youtube-card-link" href={video.url} target="_blank" rel="noopener noreferrer" aria-label={`Watch ${video.title} on YouTube`}>
+              <div class="youtube-thumbnail">
+                <img src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} alt={`${video.title} YouTube thumbnail`} loading="lazy" decoding="async" />
+                <span class="youtube-play" aria-hidden="true">&#9654;</span>
+              </div>
+              <div class="card-body"><h3>{video.title}</h3></div>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="assassin-contracts">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Assassin Contracts Missions</h2>
+        <p class="section-description">Designed and implemented 2 Assassin Contract missions. This included re-designing of the activities in new locations, implementation of enemies and their patrols, target patrols and dialogues, addition of a completely new location in Pinos Isle, optional objectives and more!</p>
+      </div>
+      <div class="card-grid">
+        {contractVideos.map(video => (
+          <article class="card youtube-card fade-in">
+            <a class="youtube-card-link" href={video.url} target="_blank" rel="noopener noreferrer" aria-label={`Watch ${video.title} on YouTube`}>
+              <div class="youtube-thumbnail">
+                <img src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} alt={`${video.title} YouTube thumbnail`} loading="lazy" decoding="async" />
+                <span class="youtube-play" aria-hidden="true">&#9654;</span>
+              </div>
+              <div class="card-body"><h3>{video.title}</h3></div>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="templar-hunt">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Templar Hunt Mission</h2>
+        <p class="section-description">Designed and implemented 1 Templar Hunt Mission. This included the L0, L1 and L2 stages where I was responsible for designing the mission and implementing all the objectives which included a real time chase, ship patrol path, a ship combat segment, dialogue implementations and more!</p>
+      </div>
+      <div class="card-grid">
+        {templarVideos.map(video => (
+          <article class="card youtube-card fade-in">
+            <a class="youtube-card-link" href={video.url} target="_blank" rel="noopener noreferrer" aria-label={`Watch ${video.title} on YouTube`}>
+              <div class="youtube-thumbnail">
+                <img src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} alt={`${video.title} YouTube thumbnail`} loading="lazy" decoding="async" />
+                <span class="youtube-play" aria-hidden="true">&#9654;</span>
+              </div>
+              <div class="card-body"><h3>{video.title}</h3></div>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="locations-design">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 class="section-title">Locations Design</h2>
+        <p class="section-description">Worked on layouts and parkour as well as the design of several locations across the Caribbean!</p>
+      </div>
+      <div class="card-grid">
+        {locationVideos.map(video => (
+          <article class="card youtube-card fade-in">
+            <a class="youtube-card-link" href={video.url} target="_blank" rel="noopener noreferrer" aria-label={`Watch ${video.title} on YouTube`}>
+              <div class="youtube-thumbnail">
+                <img src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} alt={`${video.title} YouTube thumbnail`} loading="lazy" decoding="async" />
+                <span class="youtube-play" aria-hidden="true">&#9654;</span>
+              </div>
+              <div class="card-body"><h3>{video.title}</h3></div>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .youtube-card-link {
+    display: block;
+    color: var(--text-primary);
+  }
+
+  .youtube-thumbnail {
+    aspect-ratio: 16 / 9;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #18343a, #101719 62%, #26211b);
+    position: relative;
+  }
+
+  .youtube-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .youtube-play {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3.25rem;
+    height: 2.25rem;
+    padding-left: 0.15rem;
+    border-radius: 0.65rem;
+    background: #e62117;
+    color: #fff;
+    font-size: 1rem;
+    transform: translate(-50%, -50%);
+    transition: transform var(--transition-fast), background var(--transition-fast);
+  }
+
+  .youtube-card:hover .youtube-play {
+    transform: translate(-50%, -50%) scale(1.08);
+    background: #ff3026;
+  }
+
+  .youtube-card .card-body {
+    min-height: 4.25rem;
+  }
+
+  .youtube-card h3 {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+</style>

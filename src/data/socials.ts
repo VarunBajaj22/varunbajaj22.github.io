@@ -8,8 +8,8 @@ export const socials = [
 
 export const resume = {
   label: 'View Resume',
-  url: '/Varun_Bajaj_Resume.pdf',
-  download: 'Varun_Bajaj_Resume.pdf',
+  url: '/Varun%20Bajaj%20Resume.pdf',
+  download: 'Varun Bajaj Resume.pdf',
 } as const;
 
 export const navLinks = [

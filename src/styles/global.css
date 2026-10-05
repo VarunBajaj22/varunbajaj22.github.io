@@ -136,6 +136,14 @@ img {
   margin: 0 auto;
 }
 
+.card-grid--aligned-actions {
+  align-items: stretch;
+}
+
+.card-grid--aligned-actions .card-actions {
+  margin-top: auto;
+}
+
 /* Card */
 .card {
   background: var(--bg-card);

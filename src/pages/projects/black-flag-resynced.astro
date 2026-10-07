@@ -1,5 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const trailers = [
+  { id: 'WjsTLe7bBUA', title: "Assassin's Creed Black Flag Resynced: World Premiere Trailer" },
+  { id: 'PhQ3yQjUgAc', title: "Assassin's Creed Black Flag Resynced: Official Game Overview Trailer" },
+  { id: 'U9EmVkQ5v54', title: "Assassin's Creed Black Flag Resynced: Official Summer Game Fest Trailer" },
+  { id: 'PuC4vB0kLvw', title: "Assassin's Creed Black Flag Resynced: Horizon Launch Trailer (2026)" },
+];
+
 ---
 
 <BaseLayout title="Varun Bajaj | Assassin's Creed Black Flag Resynced" description="Mission and location design work on Assassin's Creed Black Flag Resynced.">
@@ -9,26 +17,36 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <h1 class="section-title" style="font-size: clamp(2rem, 5vw, 3rem);">Assassin's Creed Black Flag Resynced</h1>
         <p class="section-description">Worked as a Quest Designer/ Level Designer at Ubisoft India in collaboration with Ubisoft Singapore, Ubisoft Barcelona, Ubisoft Belgrade, Ubisoft Bordeaux, Ubisoft Bucharest, Ubisoft Chengdu, Ubisoft Da Nang, Ubisoft Kyiv, Ubisoft Montpellier, Ubisoft Montréal, Ubisoft Philippines, Ubisoft Québec, Ubisoft Shanghai and Ubisoft Sofia!</p>
       </div>
-      <article class="card video-card fade-in">
-        <video controls playsinline preload="metadata" aria-label="Assassin's Creed Black Flag Resynced work edit">
-          <source src="/images/Assassins%20Creed%20Black%20Flag%20Resynced%20Work%20Edit.mp4" type="video/mp4" />
-        </video>
-      </article>
+      <div class="trailer-grid">
+        {trailers.map(trailer => (
+          <article class="card trailer-card fade-in">
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/${trailer.id}`}
+              title={trailer.title}
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            />
+          </article>
+        ))}
+      </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .video-card {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
+  .trailer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+    gap: 1.5rem;
   }
 
-  .video-card video {
+  .trailer-card iframe {
     display: block;
     width: 100%;
-    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 0;
     background: #000;
   }
 </style>

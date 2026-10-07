@@ -17,12 +17,13 @@ interface Props {
   image: string;
   imageAlt: string;
   darkTitle?: boolean;
+  titleBelowImage?: boolean;
   actions?: Action[];
   videos?: Video[];
   tags?: string[];
 }
 
-const { title, description, image, imageAlt, darkTitle = false, actions = [], videos = [], tags = [] } = Astro.props;
+const { title, description, image, imageAlt, darkTitle = false, titleBelowImage = false, actions = [], videos = [], tags = [] } = Astro.props;
 const cardId = title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 ---
 
@@ -35,10 +36,16 @@ const cardId = title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
           {tags.map(t => <span class="tag">{t}</span>)}
         </div>
       )}
-      <h3 class:list={['card-title', { 'dark-title': darkTitle }]}>{title}</h3>
+      {!titleBelowImage && <h3 class:list={['card-title', { 'dark-title': darkTitle }]}>{title}</h3>}
     </div>
   </div>
-  {description && (
+  {titleBelowImage && (
+    <div class="card-body">
+      <h3 class="card-title card-title-below-image">{title}</h3>
+      {description && <p set:html={description} />}
+    </div>
+  )}
+  {!titleBelowImage && description && (
     <div class="card-body">
       <p set:html={description} />
     </div>
@@ -84,6 +91,10 @@ const cardId = title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
   .dark-title {
     color: #1a1a1a;
     text-shadow: 0 1px 3px rgba(255,255,255,0.3);
+  }
+
+  .card-title-below-image {
+    color: var(--text-primary);
   }
 
   .card-tags {

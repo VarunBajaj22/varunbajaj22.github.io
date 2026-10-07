@@ -134,6 +134,7 @@ img {
 .card-grid--centered {
   max-width: 420px;
   margin: 0 auto;
+  justify-items: center;
 }
 
 .card-grid--aligned-actions {

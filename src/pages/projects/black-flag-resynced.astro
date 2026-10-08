@@ -16,6 +16,7 @@ const trailers = [
       <div class="section-header fade-in">
         <h1 class="section-title" style="font-size: clamp(2rem, 5vw, 3rem);">Assassin's Creed Black Flag Resynced</h1>
         <p class="section-description">Worked as a Quest Designer/ Level Designer at Ubisoft India in collaboration with Ubisoft Singapore, Ubisoft Barcelona, Ubisoft Belgrade, Ubisoft Bordeaux, Ubisoft Bucharest, Ubisoft Chengdu, Ubisoft Da Nang, Ubisoft Kyiv, Ubisoft Montpellier, Ubisoft Montréal, Ubisoft Philippines, Ubisoft Québec, Ubisoft Shanghai and Ubisoft Sofia!</p>
+        <p class="section-description project-detail">Worked on the mission design of golden path main quests and side missions/activities, and the level design of locations in the world including layouts, parkour, events, activities and encounters.</p>
       </div>
       <div class="trailer-grid">
         {trailers.map(trailer => (
@@ -36,6 +37,11 @@ const trailers = [
 </BaseLayout>
 
 <style>
+  .project-detail {
+    margin-top: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
   .trailer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
